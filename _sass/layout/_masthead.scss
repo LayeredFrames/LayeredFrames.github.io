@@ -3,11 +3,28 @@ header.masthead {
   text-align: center;
   color: white;
   background-image: url("#{$header-image}");
+  min-height:50%;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
+  // /* Add the blur effect */
+  // filter: blur(8px);
+  // -webkit-filter: blur(8px);
+  .backdrop{
+    backdrop-filter: blur(5px)brightness(80%);
+    -webkit-backdrop-filter: blur(5px)brightness(80%);
+    overflow: hidden;
+    margin: -1px -1px -1px -1px;
+  }
+
+  .btn{
+    margin-left:10px;
+    margin-right:10px;
+  }
   .intro-text {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
     padding-top: 150px;
     padding-bottom: 100px;
     .intro-lead-in {
@@ -25,6 +42,9 @@ header.masthead {
       @include heading-font;
     }
   }
+  .socials {
+    padding-top:50px;
+  }
 }
 @media (min-width: 768px) {
   header.masthead {
@@ -32,16 +52,16 @@ header.masthead {
       padding-top: 300px;
       padding-bottom: 200px;
       .intro-lead-in {
-        font-size: 40px;
+        font-size: 32px;
         font-style: italic;
         line-height: 40px;
         margin-bottom: 25px;
         @include serif-font;
       }
       .intro-heading {
-        font-size: 75px;
+        font-size: 50px;
         font-weight: 700;
-        line-height: 75px;
+        line-height: 50px;
         margin-bottom: 50px;
         @include heading-font;
       }

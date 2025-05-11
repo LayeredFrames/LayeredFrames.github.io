@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="footer" id="footer" style="background-color: white">
+<footer class="footer" id="footer">
   <div class="container">
     {% if site.locale and site.locale != "" and site.locale != nil %}
     <div class="row align-items-center">
@@ -10,17 +10,7 @@
       </div>
       <!-- Social Media -->
       <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          {% for link in site.data.sitetext[site.locale].footer.social %}
-          <li class="list-inline-item">
-            {% if link.url %}
-            <a href="{{ link.url }}">
-              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
-            </a>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
+      {% include socials.html %}
       </div>
       <!-- Legal -->
       <div class="col-md-4">
@@ -38,22 +28,11 @@
     <div class="row align-items-center">
       <div class="col-md-4">
         <span class="copyright"
-          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
-        >
+          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
       </div>
       <!-- Social Media -->
       <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          {% for link in site.data.sitetext.footer.social %}
-          <li class="list-inline-item">
-            {% if link.url %}
-            <a href="{{ link.url }}">
-              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
-            </a>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
+      {% include socials.html %}
       </div>
       <!-- Legal -->
       <div class="col-md-4">

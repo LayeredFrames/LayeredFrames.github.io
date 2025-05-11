@@ -21,8 +21,8 @@ email      : info@layeredframes.com #this is also the email contact forms will g
 description: "Layered Frames VFX portfolio website"
 author     : Timo Aaldriks
 logo:     #optional, defaults to site title
-  path: assets\img\logo\lf_logo.svg
-  height: 60 #height in px, defaults to 52px
+  path: assets\img\logo\logo_with_text.svg
+  height: 40 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 

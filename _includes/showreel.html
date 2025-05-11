@@ -1,0 +1,14 @@
+<!-- Showreel -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<section class="bg-dark page-section" id="{{ site.data.sitetext.showreel.section | default: "showreel" }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].showreel.title | markdownify | default: "Showreel" }}</h2>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+<div><h1>Testing</h1></div>
+{% endif %}

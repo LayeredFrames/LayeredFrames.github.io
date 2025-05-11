@@ -2,7 +2,8 @@
 #portfolio {
   .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 0px 0px 16px 0px;
+    max-width: 100%;
     .portfolio-link {
       position: relative;
       display: block;
@@ -62,17 +63,17 @@
     z-index: 2;
   }
 }
-@media (min-width: 767px) {
-  #portfolio {
-    .portfolio-item {
-      margin: 0 0 30px;
-    }
-  }
-}
+// @media (min-width: 767px) {
+//   #portfolio {
+//     .portfolio-item {
+//       margin: 0 0 30px;
+//     }
+//   }
+// }
 
 .portfolio-modal {
   .modal-dialog {
-    margin: 1rem;
+    margin: 10rem;
     max-width: 100vw;
   }
   .modal-content {

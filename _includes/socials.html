@@ -1,0 +1,12 @@
+<!-- Social Media -->
+<ul class="list-inline social-buttons">
+    {% for link in site.data.sitetext[site.locale].socials %}
+    <li class="list-inline-item">
+    {% if link.url %}
+    <a href="{{ link.url }}">
+        {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+    </a>
+    {% endif %}
+    </li>
+    {% endfor %}
+</ul>
