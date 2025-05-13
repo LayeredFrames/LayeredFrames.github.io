@@ -3,10 +3,11 @@ title: Project Threads
 subtitle: subtitle lorem ipsum dolor sit amet consectetur.
 image: assets\img\projects\placeholder.gif
 alt: Shirts on a hanger
+category: film
+homepage: true
+
 
 caption:
-  title: Threads
-  subtitle: Illustration
   thumbnail: assets\img\projects\placeholder.gif
 ---
 

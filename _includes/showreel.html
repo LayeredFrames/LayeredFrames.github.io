@@ -7,6 +7,12 @@
               <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].showreel.title | markdownify | default: "Showreel" }}</h2>
             </div>
         </div>
+            <div class="videoplayer">
+                <div class="row justify-content-md-center">
+                    {% include youtubePlayer.html id=page.youtubeID %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% else %}

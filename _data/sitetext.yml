@@ -12,7 +12,7 @@
 en: &DEFAULT_EN
   header:
     title: Timo Aaldriks
-    text: VFX Supervision<br>&<br>Compositing
+    text: VFX Supervision / Compositing
     buttons:
       - title: Showreel
         link: "#showreel"
@@ -148,8 +148,9 @@ en: &DEFAULT_EN
     submit: "Send Message"
 
   showreel:
-    title: My Showreel
+    title: Showreel
     section: showreel
+    youtubeID: "s8B_XtmqEdQ?si=xUnsysw9VUuLcF5e"
 
   footer:
     legal: "Privacy Policy"
@@ -163,8 +164,10 @@ en: &DEFAULT_EN
       icon: "fab fa-linkedin-in"
     - url: https://www.instagram.com/layeredframes/
       icon: "fab fa-instagram"
-    - url: https://github.com/LayeredFrames
-      icon: "fab fa-github"
+    # - url: https://github.com/LayeredFrames
+    #   icon: "fab fa-github"
+    - url: https://www.imdb.com/name/nm5017677/
+      icon: "fab fa-imdb"
 
 en-US:
   <<: *DEFAULT_EN
