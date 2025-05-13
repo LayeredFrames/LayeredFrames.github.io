@@ -1,13 +1,16 @@
 // Styling for the portfolio section
 #portfolio {
+  .portfolio-row-justify-center {
+    justify-content: center;
+  }
   .portfolio-item {
     right: 0;
     margin: 0px 0px 16px 0px;
-    max-width: 100%;
+    width: auto !important;
+    max-width: 250px;
     .portfolio-link {
       position: relative;
       display: block;
-      // max-width: 100% auto;
       margin: 0 auto;
       cursor: pointer;
       .portfolio-hover {
@@ -30,7 +33,7 @@
           height: 20px;
           margin-top: -12px;
           text-align: center;
-          color: white;
+          color: $white;
           i {
             margin-top: -12px;
           }
@@ -42,11 +45,18 @@
       }
     }
     .portfolio-caption {
-      max-width: 400px;
-      margin: 0 auto;
+      // margin: 0 auto;
+      position: absolute;
+      width: 100%;
+      bottom:0;
+      margin-top: auto;
       padding: 25px;
-      text-align: center;
-      background-color: $white;
+      // text-align: left;
+      // position: bottom;
+      color:$gray-800;
+      // background-color: rgba($gray-500, 0.25);
+      background-color: $gray-500;
+      // backdrop-filter: blur(10px);
       h4 {
         margin: 0;
         text-transform: none;

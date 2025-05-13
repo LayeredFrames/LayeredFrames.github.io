@@ -36,7 +36,7 @@ en: &DEFAULT_EN
 
   portfolio:
     title: "Portfolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    text: "Click on a project to see more"
     section: portfolio
     closebutton: "Close Project"
 

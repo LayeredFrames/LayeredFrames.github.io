@@ -2,7 +2,8 @@
 caption: #what displays in the portfolio grid:
   title: Example
   subtitle: subtitle
-  thumbnail: assets\img\projects\placeholder.gif
+  # thumbnail: assets\img\projects\placeholder.gif
+  thumbnail: https://placehold.co/600x400
   
 #what displays when the item is clicked:
 title: Title
