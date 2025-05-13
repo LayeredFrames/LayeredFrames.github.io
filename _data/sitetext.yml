@@ -149,6 +149,7 @@ en: &DEFAULT_EN
 
   showreel:
     title: Showreel
+    text: Site under construction, NOT my showreel
     section: showreel
     youtubeID: "s8B_XtmqEdQ?si=xUnsysw9VUuLcF5e"
 
