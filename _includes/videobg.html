@@ -1,0 +1,76 @@
+<div id="videoContainer"></div>
+
+<script>
+	var videoContainer = document.getElementById('videoContainer'),
+    nextVideo,
+    videoObjects =
+    [
+        document.createElement('video'),
+        document.createElement('video')
+    ],
+	captionElement = document.createElement('p'),
+	roleElement = document.createElement('p'),
+    vidSources =
+    [		
+{% for vid in page.headervids %}
+{url: "{{ vid.url }}", caption: "{{ vid.caption }}", role: "{{ vid.role }}"},
+{% endfor %}
+    ],
+    //random starting point
+    nextActiveVideo = Math.floor((Math.random() * vidSources.length));
+	// nextActiveVideo = 0;
+
+captionElement.innerText = "Test";
+captionElement.setAttribute("class", "videobg-caption");
+
+videoObjects[0].inx = 0; //set index
+videoObjects[0].className = "background";
+videoObjects[1].inx = 1;
+videoObjects[1].className = "background";
+
+videoObjects[0].style.backgroundColor = "black";
+videoObjects[1].style.backgroundColor = "black";
+
+initVideoElement(videoObjects[0]);
+initVideoElement(videoObjects[1]);
+
+videoObjects[0].src = vidSources[nextActiveVideo].url;
+captionElement.innerText = vidSources[nextActiveVideo].caption
+videoContainer.appendChild(videoObjects[0]);
+
+videoObjects[1].style.display = 'none';
+videoContainer.appendChild(videoObjects[1]);
+videoContainer.appendChild(captionElement);
+function initVideoElement(video)
+{
+    video.playsinline = true;
+    video.muted = true;
+    video.preload = 'auto'; //but do not set autoplay, because it deletes preload
+    //loadedmetadata is wrong because if we use it then we get endless loop
+    video.onplaying = function(e)
+    {
+        //select next index. If is equal vidSources.length then it is 0
+        nextActiveVideo = ++nextActiveVideo % vidSources.length;
+
+        //replace the video elements against each other:
+        if(this.inx == 0){
+            nextVideo = videoObjects[1];
+		} else{
+            nextVideo = videoObjects[0];
+		}
+        nextVideo.src = vidSources[nextActiveVideo].url;
+		captionElement.nextCaption = vidSources[nextActiveVideo].caption;
+        nextVideo.pause();
+    };
+
+    video.onended = function(e)
+    {
+        this.style.display = 'none';
+        nextVideo.style.display = 'block';
+		captionElement.innerText = captionElement.nextCaption
+        nextVideo.play();
+    };
+}
+
+videoObjects[0].play();
+</script>

@@ -48,7 +48,9 @@
   <!-- Header -->
   {% if site.locale and site.locale != "" and site.locale != nil %}
   <header class="masthead">
+    <div class="header-container">
     <!-- <div class="background"></div> -->
+     {% include videobg.html %}
     <div class="backdrop">
       <div class="intro-text">
 	  {%- if site.data.sitetext[site.locale].header.title -%}
@@ -78,11 +80,14 @@
 	  {%- endif -%}
 	  {%- if site.data.sitetext.header.buttons -%}
     {% for button in site.data.sitetext[site.locale].header.buttons %}
+    <div class="btn-glass">
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ button.link }}">{{ button.title }}</a>
+      </div>
     {% endfor %}
 	  {%- endif -%}
       </div>
     </div>
+  </div>
   </header>
   {% endif %}
   <!-- End Header -->

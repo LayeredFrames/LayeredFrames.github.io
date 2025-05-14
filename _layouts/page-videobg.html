@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+{% if page.background == "grey" or page.background == "gray" %}
+<script>
+document.getElementById("page-top").className="bg-dark";
+</script>
+{% endif %}
+
+{% if page.videobg %}
+<!-- <div class="videobg-container"> -->
+<video class="background"
+	loop
+	muted
+	autoplay
+	preload="auto"
+	poster="https://placehold.co/600x400">
+<source src="https://stormpostproduction.com/wp-content/uploads/2024/05/Homepage_de-terugreis.mp4" type="video/mp4">
+</video>
+<!-- </div> -->
+{% endif %}
+
+<div class="container" id="pagecontainer">
+{{ content }}
+</div>

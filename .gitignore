@@ -3,6 +3,7 @@
 .sass-cache
 .jekyll-cache
 _site
+sandbox
 Gemfile.lock
 unused
 bootstrap-reference.html

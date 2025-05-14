@@ -38,7 +38,7 @@ en: &DEFAULT_EN
     title: "Portfolio"
     text: "Click on a project to see more"
     section: portfolio
-    closebutton: "Close Project"
+    closebutton: "Close"
 
   # timeline:
   #   title: "Timeline"
