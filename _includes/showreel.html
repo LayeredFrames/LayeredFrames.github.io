@@ -1,21 +1,21 @@
 <!-- Showreel -->
 {% if site.locale and site.locale != "" and site.locale != nil %}
-<section class="bg-dark page-section" id="{{ site.data.sitetext.showreel.section | default: "showreel" }}">
+{% assign showreel_title = site.data.sitetext[site.locale].showreel.title %}
+{% assign showreel_text = site.data.sitetext[site.locale].showreel.text %}
+{% assign showreel_section = site.data.sitetext[site.locale].showreel.section %}
+{% else %}
+{% assign showreel_title = site.data.sitetext.showreel.title %}
+{% assign showreel_text = site.data.sitetext.showreel.text %}
+{% assign showreel_section = site.data.sitetext.showreel.section %}
+{% endif %}
+<section class="page-section showreel" id="{{ showreel_section | default: "showreel" }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].showreel.title | markdownify | default: "Showreel" }}</h2>
-              <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].showreel.text | markdownify | default: "Showreel" }}</h3>
+                <h2 class="section-heading text-uppercase">{{ showreel_title | markdownify | default: "Showreel" }}</h2>
+                <h3 class="section-subheading text-muted">{{ showreel_text | markdownify | default: "Showreel" }}</h3>
             </div>
         </div>
-            <div class="videoplayer">
-                <div class="row justify-content-md-center">
-                    {% include youtubePlayer.html id=page.youtubeID %}
-                </div>
-            </div>
-        </div>
+        {% include vimeoPlayer.html %}
     </div>
 </section>
-{% else %}
-<div><h1>Testing</h1></div>
-{% endif %}

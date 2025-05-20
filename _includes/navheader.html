@@ -15,7 +15,11 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
         {% if site.locale and site.locale != "" and site.locale != nil %}
-        {% for link in site.data.navigation[site.locale].nav %}
+        {% assign nav = site.data.navigation[site.locale].nav %}
+        {%- else -%}
+        {% assign nav = site.data.navigation.nav %}
+        {%- endif -%}
+        {% for link in nav %}
           <li class="nav-item">
             {%- if link.url -%}
               <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
@@ -26,19 +30,6 @@
             {%- endif -%}
           </li>
         {% endfor %}
-        {% else %}
-        {% for link in site.data.navigation.nav %}
-        <li class="nav-item">
-          {%- if link.url -%}
-            <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-          {%- elsif link.section -%}
-            <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
-          {%- else -%}
-            <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
-          {%- endif -%}
-        </li>
-        {% endfor %}
-        {% endif %}
         </ul>
       </div>
     </div>
@@ -47,47 +38,39 @@
   
   <!-- Header -->
   {% if site.locale and site.locale != "" and site.locale != nil %}
+  {% assign header_title = site.data.sitetext[site.locale].header.title %}
+  {% assign header_title = site.data.sitetext[site.locale].header.title %}
+  {% assign header_text = site.data.sitetext[site.locale].header.text %}
+  {% assign header_text = site.data.sitetext[site.locale].header.text %}
+  {% assign header_buttons = site.data.sitetext[site.locale].header.buttons %}
+  {% assign header_buttons = site.data.sitetext[site.locale].header.buttons %}
+  {% else %}
+  {% assign header_title = site.data.sitetext.header.title %}
+  {% assign header_title = site.data.sitetext.header.title %}
+  {% assign header_text = site.data.sitetext.header.text %}
+  {% assign header_text = site.data.sitetext.header.text %}
+  {% assign header_buttons = site.data.sitetext.header.buttons %}
+  {% assign header_buttons = site.data.sitetext.header.buttons %}
+  {% endif %}
   <header class="masthead">
     <div class="header-container">
     <!-- <div class="background"></div> -->
      {% include videobg.html %}
     <div class="backdrop">
       <div class="intro-text">
-	  {%- if site.data.sitetext[site.locale].header.title -%}
-        <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
+	  {%- if header_title -%}
+        <div class="intro-lead-in">{{ header_title | markdownify }}</div>
 	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.text -%}
-        <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
+	  {%- if header_text -%}
+        <div class="intro-heading text-uppercase">{{ header_text | markdownify }}</div>
 	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.buttons -%}
-    {% for button in site.data.sitetext[site.locale].header.buttons %}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ button.link }}">{{ button.title }}</a>
+	  {%- if header_buttons -%}
+    {% for button in header_buttons %}
+        <a class="btn btn-classy btn-xl text-uppercase js-scroll-trigger" href="{{ button.link }}">{{ button.title }}</a>
     {% endfor %}
     <div class="socials">{% include socials.html %}</div>
 	  {%- endif -%}
       </div>
     </div>
   </header>
-  {% else %}
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-	  {%- if site.data.sitetext.header.title -%}
-        <div class="intro-lead-in">{{ site.data.sitetext.header.title | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext.header.text -%}
-        <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext.header.buttons -%}
-    {% for button in site.data.sitetext[site.locale].header.buttons %}
-    <div class="btn-glass">
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ button.link }}">{{ button.title }}</a>
-      </div>
-    {% endfor %}
-	  {%- endif -%}
-      </div>
-    </div>
-  </div>
-  </header>
-  {% endif %}
   <!-- End Header -->

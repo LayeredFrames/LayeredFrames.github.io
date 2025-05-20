@@ -24,3 +24,21 @@
     box-shadow: 0 0 0 0.2rem darken($primary, 7.5%) !important;
   }
 }
+
+.btn-classy{
+  margin:10px;
+  color:$white;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color:white;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken($primary, 7.5%) !important;
+    border-color: darken($primary, 7.5%) !important;
+    color: white;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem darken($primary, 7.5%) !important;
+  }
+}

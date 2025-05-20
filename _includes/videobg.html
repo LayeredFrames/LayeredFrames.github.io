@@ -1,4 +1,4 @@
-<div id="videoContainer"></div>
+<div class="videoContainerBG"><div id="videoContainer" class="pre-fade-in"></div></div>
 
 <script>
 	var videoContainer = document.getElementById('videoContainer'),
@@ -12,16 +12,17 @@
 	roleElement = document.createElement('p'),
     vidSources =
     [		
-{% for vid in page.headervids %}
-{url: "{{ vid.url }}", caption: "{{ vid.caption }}", role: "{{ vid.role }}"},
+{% for vid in site.data.playlist.headervids %}
+{url: "{{ vid.url }}", caption: "{{ vid.caption }}", role: "{{ vid.role }}", src: "{{ vid.source }}"},
 {% endfor %}
     ],
     //random starting point
-    nextActiveVideo = Math.floor((Math.random() * vidSources.length));
+    nextActiveVideo = Math.floor((Math.random() * vidSources.length)),
+	initRun=true;
 	// nextActiveVideo = 0;
 
-captionElement.innerText = "Test";
 captionElement.setAttribute("class", "videobg-caption");
+roleElement.setAttribute("class", "videobg-role videobg-caption");
 
 videoObjects[0].inx = 0; //set index
 videoObjects[0].className = "background";
@@ -34,13 +35,15 @@ videoObjects[1].style.backgroundColor = "black";
 initVideoElement(videoObjects[0]);
 initVideoElement(videoObjects[1]);
 
-videoObjects[0].src = vidSources[nextActiveVideo].url;
+videoObjects[0].src = vidSources[nextActiveVideo].src;
 captionElement.innerText = vidSources[nextActiveVideo].caption
+roleElement.innerText = vidSources[nextActiveVideo].role
 videoContainer.appendChild(videoObjects[0]);
 
 videoObjects[1].style.display = 'none';
 videoContainer.appendChild(videoObjects[1]);
 videoContainer.appendChild(captionElement);
+videoContainer.appendChild(roleElement);
 function initVideoElement(video)
 {
     video.playsinline = true;
@@ -49,6 +52,12 @@ function initVideoElement(video)
     //loadedmetadata is wrong because if we use it then we get endless loop
     video.onplaying = function(e)
     {
+		if (initRun) {
+			console.log("Testing")
+			initRun = false;
+			jQuery('#videoContainer').removeClass("pre-fade-in");
+			jQuery('#videoContainer').addClass("fade-in");
+		};
         //select next index. If is equal vidSources.length then it is 0
         nextActiveVideo = ++nextActiveVideo % vidSources.length;
 
@@ -58,8 +67,9 @@ function initVideoElement(video)
 		} else{
             nextVideo = videoObjects[0];
 		}
-        nextVideo.src = vidSources[nextActiveVideo].url;
+        nextVideo.src = vidSources[nextActiveVideo].src;
 		captionElement.nextCaption = vidSources[nextActiveVideo].caption;
+		roleElement.nextRole = vidSources[nextActiveVideo].role;
         nextVideo.pause();
     };
 
@@ -68,6 +78,7 @@ function initVideoElement(video)
         this.style.display = 'none';
         nextVideo.style.display = 'block';
 		captionElement.innerText = captionElement.nextCaption
+		roleElement.innerText = roleElement.nextRole
         nextVideo.play();
     };
 }

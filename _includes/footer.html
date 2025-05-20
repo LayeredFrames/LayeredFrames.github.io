@@ -1,7 +1,11 @@
 <!-- Footer -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+{% assign footer_legal = site.data.sitetext[site.locale].footer.legal %}
+{% else %}
+{% assign footer_legal = site.data.sitetext.footer.legal %}
+{% endif %}
 <footer class="footer" id="footer">
   <div class="container">
-    {% if site.locale and site.locale != "" and site.locale != nil %}
     <div class="row align-items-center">
       <div class="col-md-4">
         <span class="copyright"
@@ -17,36 +21,12 @@
         <ul class="list-inline quicklinks">
           <li class="list-inline-item">
             <a href="legal"
-              >{{ site.data.sitetext[site.locale].footer.legal | default:
-              "Privacy Policy" }}</a
-            >
+              >{{ footer_legalal | default:
+              "Privacy Policy" }}</a>
           </li>
         </ul>
       </div>
     </div>
-    {% else %}
-    <div class="row align-items-center">
-      <div class="col-md-4">
-        <span class="copyright"
-          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
-      </div>
-      <!-- Social Media -->
-      <div class="col-md-4">
-      {% include socials.html %}
-      </div>
-      <!-- Legal -->
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="legal"
-              >{{ site.data.sitetext.footer.legal | default:
-              "Privacy Policy" }}</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    {% endif %}
   </div>
 </footer>
 {% if page.layout == "page" or page.layout == "page-videobg" %}

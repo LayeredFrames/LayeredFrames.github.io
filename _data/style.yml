@@ -26,3 +26,7 @@ fonts:
     for: "serif"
   - name: "Roboto Slab"
     for: "body"
+
+scroll-duration: 1000
+fade-duration: 250
+fade-duration-x2: 500

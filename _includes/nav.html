@@ -1,4 +1,9 @@
 <!-- Navigation -->
+{%- if site.locale and site.locale != "" and site.locale != nil -%}
+{% assign nav = site.data.navigation[site.locale].nav %}
+{%- else -%}
+{% assign nav = site.data.navigation.nav %}
+{%- endif -%}
 <nav
   class="navbar navbar-expand-lg navbar-dark fixed-top"
   id="mainNav"
@@ -26,8 +31,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
-      {% if site.locale and site.locale != "" and site.locale != nil %}
-        {%- for link in site.data.navigation[site.locale].nav -%}
+        {%- for link in nav -%}
         <li class="nav-item">
           {%- if link.url -%}
           <a class="nav-link js-scroll-trigger" href="{{ link.url }}"
@@ -44,25 +48,6 @@
           {%- endif -%}
         </li>
         {%- endfor -%}
-      {% else %}
-        {%- for link in site.data.navigation.nav -%}
-        <li class="nav-item">
-          {%- if link.url -%}
-          <a class="nav-link js-scroll-trigger" href="{{ link.url }}"
-            >{{ link.title }}</a
-          >
-          {%- elsif link.section -%}
-          <a
-            class="nav-link js-scroll-trigger"
-            href="{{ site.baseurl }}/#{{ link.section }}"
-            >{{ link.title }}</a
-          >
-          {%- else -%}
-          <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      {% endif %}
       </ul>
     </div>
   </div>

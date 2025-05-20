@@ -1,40 +1,51 @@
-.embed-container iframe{
-    width:100%;
-    height:100%;
-    justify-content: center !important;
-}
+// .embed-container iframe{
+//     width:100%;
+//     height:100%;
+//     justify-content: center !important;
+// }
 
-@media (min-width: 400px){
-    .embed-container iframe{
-        width:320px;
-        height:200px;
-    }
-}
+// section.showreel{
+    // position: absolute;  /* or fixed, if your header fills the screen */
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+    // height: 100vh;
+    // background-color: black;
+//     // z-index: 0; /* Must be behind text and overlays */
+//     overflow: hidden;
+// }
 
-@media (min-width: 500px){
-    .embed-container iframe{
-        width:400px;
-        height:250px;
-    }
-}
+// @media (min-width: 400px){
+//     .embed-container iframe{
+//         width:320px;
+//         height:200px;
+//     }
+// }
 
-@media (min-width: 600px){
-    .embed-container iframe{
-        width:520px;
-        height:300px;
-    }
-}
+// @media (min-width: 500px){
+//     .embed-container iframe{
+//         width:400px;
+//         height:250px;
+//     }
+// }
 
-@media (min-width: 800px){
-    .embed-container iframe{
-        width:720px;
-        height:450px;
-    }
-}
+// @media (min-width: 600px){
+//     .embed-container iframe{
+//         width:520px;
+//         height:300px;
+//     }
+// }
 
-@media (min-width: 950px){
-    .embed-container iframe{
-        width:940px;
-        height:520px;
-    }
-}
+// @media (min-width: 800px){
+//     .embed-container iframe{
+//         width:720px;
+//         height:450px;
+//     }
+// }
+
+// @media (min-width: 950px){
+//     .embed-container iframe{
+//         width:940px;
+//         height:520px;
+//     }
+// }

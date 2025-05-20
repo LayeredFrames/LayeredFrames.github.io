@@ -16,6 +16,8 @@ en: &DEFAULT_EN
     buttons:
       - title: Showreel
         link: "#showreel"
+      - title: Portfolio
+        link: "#portfolio"
       - title: Contact
         link: "#contact"
 
@@ -112,7 +114,7 @@ en: &DEFAULT_EN
 
   showreel:
     title: Showreel
-    text: Site under construction, NOT my showreel
+    text: ""
     section: showreel
     youtubeID: "s8B_XtmqEdQ?si=xUnsysw9VUuLcF5e"
 

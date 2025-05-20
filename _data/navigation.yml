@@ -15,6 +15,7 @@ en: &DEFAULT_EN
     #   section: services
     - title: "Showreel"
       section: "showreel"
+      class: "js-scroll-trigger-fade"
     #   subpages:
     #     - title: "Testing 1"
     #       url: "Testing"
