@@ -1,6 +1,7 @@
 
 <div class="row portfolio-row-justify-center">
-{% for project in site.portfolio %}
+{% assign projects = site.portfolio | sort:"order" %}
+{% for project in projects %}
 {% if include.homepage == false or include.homepage == nil or project.homepage %}
 {% assign showonpage = true %}
 {% else %}
@@ -15,7 +16,7 @@
 
  {% if showonpage and showcategory %}
   <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width }}px">
-    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#p{{ forloop.index }}">
+    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{{ project.title | downcase | replace: ' ', '-' }}">
       <div class="portfolio-hover">
         {% if project.caption.role %}
           <div class="portfolio-caption">

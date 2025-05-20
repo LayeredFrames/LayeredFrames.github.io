@@ -9,7 +9,7 @@
 
 <div
   class="portfolio-modal modal fade"
-  id="p{{ forloop.index }}"
+  id="{{ project.title | downcase | replace: ' ', '-' }}"
   tabindex="-1"
   role="dialog"
   aria-hidden="true"
@@ -24,7 +24,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <!-- <div class="col-lg-8 mx-auto"> -->
             <div class="modal-body">
               <!-- Project Details Go Here -->
               <h2 class="project-title">{{ project.title }}</h2>
@@ -43,7 +43,7 @@
                 {{ closebutton | default: "Close Project" }}
               </button>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
