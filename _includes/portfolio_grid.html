@@ -1,4 +1,5 @@
 
+<div class="row portfolio-row-justify-center-container">
 <div class="row portfolio-row-justify-center">
 {% assign projects = site.portfolio | sort:"order" %}
 {% for project in projects %}
@@ -16,7 +17,10 @@
 
  {% if showonpage and showcategory %}
   <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width }}px">
-    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{{ project.title | downcase | replace: ' ', '-' }}">
+    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{{ project.title | downcase | replace: ' ', '-' | url_encode | remove: '%'}}">
+      {% if project.caption.title %}
+      <div class="portfolio-title">{{ project.caption.title }}</div>
+      {% endif %}
       <div class="portfolio-hover">
         {% if project.caption.role %}
           <div class="portfolio-caption">
@@ -38,4 +42,5 @@
     <a class="btn btn-classy btn-xl" href="{{ include.more }}">More...</a>
 </div>
 {% endif %}
+</div>
 </div>

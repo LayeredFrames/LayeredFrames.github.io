@@ -9,7 +9,7 @@
 
 <div
   class="portfolio-modal modal fade"
-  id="{{ project.title | downcase | replace: ' ', '-' }}"
+  id="{{ project.title | downcase | replace: ' ', '-' | url_encode | remove: '%'}}"
   tabindex="-1"
   role="dialog"
   aria-hidden="true"

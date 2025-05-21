@@ -15,12 +15,10 @@
         <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].portfolio.text | markdownify }}</h3>
       </div>
     </div>
-    <!-- <div class="row portfolio-row-justify-center"> -->
+      <p class="portfolio-category">Film</p>
       {% include portfolio_grid.html homepage=true category="film" max-width=250 more="/page" %}
-    <!-- </div> -->
-    <!-- <div class="col-md-auto">
-      <a class="btn btn-primary btn-xl text-uppercase" href="http://www.google.nl">More...</a>
-    </div> -->
+      <p class="portfolio-category">Commercial</p>
+      {% include portfolio_grid.html homepage=true category="commercial" max-width=400 more="/page" %}
 </section>
 
 {% include modals.html %}

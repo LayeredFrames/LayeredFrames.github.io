@@ -1,9 +1,14 @@
 // Styling for the portfolio section
 #portfolio {
+  .portfolio-row-justify-center-container{
+    justify-content: center;
+    // max-width: 1400px;
+  }
   .portfolio-row-justify-center {
     justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
+    max-width: 1400px;
   }
   .portfolio-item {
     right: 0;
@@ -48,6 +53,14 @@
         }
       }
     }
+    .portfolio-title{
+      color: white;
+      position: absolute;
+      width: 100%;
+      top:0;
+      top:0;padding: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
     .portfolio-caption {
       // margin: 0 auto;
       position: absolute;
@@ -85,6 +98,14 @@
 //     }
 //   }
 // }
+
+.portfolio-category{
+  text-align: center;
+  font-size: 28px;
+  @include serif-font;
+  color: $gray-600;
+  padding-top:20px;
+}
 
 .portfolio-modal {
   .modal-dialog {
