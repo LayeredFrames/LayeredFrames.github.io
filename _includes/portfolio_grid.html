@@ -17,7 +17,7 @@
 
  {% if showonpage and showcategory %}
   <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width }}px">
-    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{{ project.title | downcase | replace: ' ', '-' | url_encode | remove: '%'}}">
+    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{{ project.title | project_url }}">
       {% if project.caption.title %}
       <div class="portfolio-title">{{ project.caption.title }}</div>
       {% endif %}
@@ -39,7 +39,7 @@
 {% endfor %}
 {% if include.more %}
 <div class="col-md-auto portfolio-item">
-    <a class="btn btn-classy btn-xl" href="{{ include.more }}">More...</a>
+    <a class="btn btn-classy" href="{{ include.more }}">More...</a>
 </div>
 {% endif %}
 </div>
