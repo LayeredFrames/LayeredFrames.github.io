@@ -17,7 +17,7 @@
 
  {% if showonpage and showcategory %}
   <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width }}px">
-    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{{ project.title | project_url }}">
+    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
       {% if project.caption.title %}
       <div class="portfolio-title">{{ project.caption.title }}</div>
       {% endif %}

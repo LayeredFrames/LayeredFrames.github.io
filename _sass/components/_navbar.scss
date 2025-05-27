@@ -41,6 +41,38 @@
       }
     }
   }
+  .dropdown-menu {
+    // background-color: rgba($color: #000000, $alpha: 0.25);
+    // background-color: $gray-900;
+    background:none;
+    border:none;
+    padding: 0;
+    margin-top: -10px;
+    border-radius: 5px;
+
+    // Initial state for animation
+    display: block;
+    opacity: 0;
+    transform: translateY(-20px); // Slide up initially
+    visibility: hidden; // Hide the dropdown without using display
+    transition: opacity 0.3s ease, transform 0.3s ease; // Smooth animation
+
+  &.show {
+    opacity: 1; // Fade in
+    transform: translateY(0); // Slide down
+    visibility: visible; // Make the dropdown visible
+  }
+    .dropdown-item {
+      color: $gray-200;
+      text-transform: none;
+      @include heading-font;
+      &:hover,
+      &:focus {
+        color: $primary;
+        background-color: transparent;
+      }
+    }
+  }
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -71,6 +103,9 @@
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
+      }
+      .dropdown-menu{
+        background-color: $gray-900;
       }
     }
   }
