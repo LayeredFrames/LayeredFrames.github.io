@@ -1,7 +1,7 @@
 // Styling for the navbar
 #mainNav {
   filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));
-  // -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));
   // backdrop-filter: blur(15px)brightness(80%);
   // -webkit-backdrop-filter: blur(5px)brightness(10%);
   background-color: $gray-900;

@@ -33,6 +33,7 @@ $contact-image: "{{ site.data.style.contact-image }}";
 @import "components/buttons.scss";
 @import "components/navbar.scss";
 @import "components/client-scroll.scss";
+@import "components/video-comparison.scss";
 
 // Layout
 @import "layout/masthead.scss";

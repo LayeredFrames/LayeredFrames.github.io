@@ -1,0 +1,11 @@
+<div class="video-comparison">
+    <video class="before" src="{{ include.before }}" muted{% if include.autoplay %} autoplay{% endif %} {% if include.loop != false %} loop{% endif %}></video>
+    <video class="after" src="{{ include.after }}" muted{% if include.autoplay %} autoplay{% endif %} {% if include.loop != false %} loop{% endif %}></video>
+    <div class="divider" start_pos="{{ include.position | default: 50}}"><div class="handle"><i class="fas fa-arrows-alt-h"></i></div></div>
+    <div class="controls">
+        <button id="togglePlayButton" class="video-playbutton">
+            <i class="fas fa-play"></i>
+        </button>
+        <input id="seekSlider" type="range" min="0" max="100" value="0" step="1">
+    </div>
+</div>
