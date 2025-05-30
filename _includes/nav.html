@@ -1,4 +1,14 @@
 <!-- Navigation -->
+
+{% assign sandbox_exists = false %}
+
+{% for file in site.pages %}
+  {% if file.path contains 'sandbox/' %}
+    {% assign sandbox_exists = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
   <a class="navbar-brand js-scroll-trigger" href="/{{ site.baseurl }}#page-top">
@@ -42,6 +52,17 @@
           {% endif %}
         </li>
       {% endfor %}
+      {% if sandbox_exists %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/{{ site.baseurl }}/sandbox/">Sandbox</a>
+          <ul class="dropdown-menu">
+            {% for page in site.pages %}
+            {% if page.path contains 'sandbox/' %}
+              <li><a class="dropdown-item" href="{{ site.baseurl }}/{{ page.path }}">{{ page.path | split: '/' | last | split: '.' | first}}</a></li>
+            {% endif %}
+            {% endfor %}
+        </li>
+      {% endif %}
       </ul>
     </div>
   </div>

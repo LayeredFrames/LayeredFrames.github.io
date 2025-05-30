@@ -7,19 +7,23 @@ headervids:
     caption: Red Light
     role: Compositor
     url: /#portfolio
-  - source: "https://stormpostproduction.com/wp-content/uploads/2024/09/Witte-Flits_Home-page.mov"
-    caption: Witte Flits
-    role: On-set supervisor
-    url: /#portfolio
+  # - source: "https://stormpostproduction.com/wp-content/uploads/2024/09/Witte-Flits_Home-page.mov"
+  #   caption: Witte Flits
+  #   role: On-set supervisor
+  #   url: /#portfolio
 #   - source: "https://stormpostproduction.com/wp-content/uploads/2023/10/Sweet_Dreams-1.mp4"
 #     caption: Sweet Dreams
 #     role: VFX Supervisor
 #     url: /#portfolio
-  - source: "https://stormpostproduction.com/wp-content/uploads/2024/12/MontBlanc.mp4"
-    caption: MontBlanc
-    role: Technical Director
-    url: /#portfolio
-  - source: "https://stormpostproduction.com/wp-content/uploads/2024/05/Homepage_de-terugreis.mp4"
-    caption: De Terugreis
-    role: Audience member
+  # - source: "https://stormpostproduction.com/wp-content/uploads/2024/12/MontBlanc.mp4"
+  #   caption: MontBlanc
+  #   role: Technical Director
+  #   url: /#portfolio
+  # - source: "https://stormpostproduction.com/wp-content/uploads/2024/05/Homepage_de-terugreis.mp4"
+  #   caption: De Terugreis
+  #   role: Audience member
+  #   url: /#portfolio
+  - source: "/assets/video/V1-0002_P001_7_wire_removal_v006.mp4"
+    caption: Made by Lions - Medianauts
+    role: VFX Supervisor
     url: /#portfolio

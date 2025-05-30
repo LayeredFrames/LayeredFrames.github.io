@@ -33,17 +33,6 @@ en: &DEFAULT_EN
           url: /commercial-portfolio
         - title: Other
           url: /other-portfolio
-    - title: "Sandbox"
-      url: /sandbox
-      subpages:
-        - title: "Dropdown menu"
-          url: /sandbox/dropdownMenu.html
-        - title: "videobg"
-          url: /sandbox/videobg.html
-        - title: "Before / After"
-          url: /sandbox/beforeafter.html
-    # - title: "About"
-    #   section: about
     # - title: "Timeline"
     #   section: timeline
     # - title: "Team"
