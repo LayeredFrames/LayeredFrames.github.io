@@ -4,7 +4,11 @@
     <div class="divider" start_pos="{{ include.position | default: 50}}"><div class="handle"><i class="fas fa-arrows-alt-h"></i></div></div>
     <div class="controls">
         <button id="togglePlayButton" class="video-playbutton">
+            {% if include.autoplay %}
+            <i class="fas fa-pause"></i>
+            {% else %}
             <i class="fas fa-play"></i>
+            {% endif %}
         </button>
         <input id="seekSlider" type="range" min="0" max="100" value="0" step="1">
     </div>

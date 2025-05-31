@@ -16,7 +16,8 @@
 {% endif %}
 
  {% if showonpage and showcategory %}
-  <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width }}px">
+  <div class="portfolio-item-container">
+  <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width | default: 250 }}px">
     <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
       {% if project.caption.title %}
       <div class="portfolio-title">{{ project.caption.title }}</div>
@@ -35,6 +36,7 @@
       <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
     </a>
   </div>
+  </div>
 {% endif %}
 {% endfor %}
 {% if include.more %}
@@ -44,3 +46,27 @@
 {% endif %}
 </div>
 </div>
+
+<script>
+  document.querySelectorAll('.portfolio-item-container').forEach(container => {
+    container.addEventListener('mousemove', (e) => {
+      item = container.querySelector('.portfolio-item');
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left; // Mouse X position relative to the item
+      const y = e.clientY - rect.top;  // Mouse Y position relative to the item
+  
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+  
+      const rotateX = ((y - centerY) / centerY) * -{{ include.rotation | default: 10 }}; // Rotate based on Y position
+      const rotateY = ((x - centerX) / centerX) * {{ include.rotation | default: 10 }}; // Rotate based on X position
+  
+      item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale({{ include.scale | default: 1.03 }})`; // Apply rotation and scale
+    });
+  
+    container.addEventListener('mouseleave', () => {
+      item = container.querySelector('.portfolio-item');
+      item.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)'; // Reset rotation
+    });
+  });
+  </script>

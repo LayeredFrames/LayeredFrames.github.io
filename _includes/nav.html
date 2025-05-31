@@ -58,7 +58,12 @@
           <ul class="dropdown-menu">
             {% for page in site.pages %}
             {% if page.path contains 'sandbox/' %}
-              <li><a class="dropdown-item" href="{{ site.baseurl }}/{{ page.path }}">{{ page.path | split: '/' | last | split: '.' | first}}</a></li>
+            {% if page.title %}
+            {% assign page_title = page.title %}
+            {% else %}
+            {% assign page_title = page.path | split: '/' | last | replace: '.html', '' %}
+            {% endif %}
+              <li><a class="dropdown-item" href="{{ page.url }}">{{ page_title }}</a></li>
             {% endif %}
             {% endfor %}
         </li>

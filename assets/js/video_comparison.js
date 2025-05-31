@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const divider = comparisonContainer.querySelector('.divider');
     const seekSlider = comparisonContainer.querySelector('input[type="range"]');
     const togglePlayButton = comparisonContainer.querySelector('.video-playbutton');
+    const playPauseIcon = togglePlayButton.querySelector('i');
   
     let isDragging = false;
     // let currentPercentage = 25; // Default slider position
@@ -28,17 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     };
 
-    const togglePlayPause = () => {const icon = togglePlayButton.querySelector('i');
+    const togglePlayPause = () => {
     if (beforeVideo.paused) {
         beforeVideo.play();
         afterVideo.play();
-        icon.classList.remove('fa-play');
-        icon.classList.add('fa-pause');
+        playPauseIcon.classList.remove('fa-play');
+        playPauseIcon.classList.add('fa-pause');
     } else {
         beforeVideo.pause();
         afterVideo.pause();
-        icon.classList.remove('fa-pause');
-        icon.classList.add('fa-play');
+        playPauseIcon.classList.remove('fa-pause');
+        playPauseIcon.classList.add('fa-play');
     };
     syncVideos();}
 

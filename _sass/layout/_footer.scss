@@ -34,10 +34,12 @@ ul.social-buttons {
       // border-radius: 25%;
       outline: none;
       // background-color: $gray-900;
+      opacity: 0.5;
       &:active,
       &:focus,
       &:hover {
-        background-color: $primary;
+        opacity: 1;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
       }
     }
   }

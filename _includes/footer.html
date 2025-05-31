@@ -29,7 +29,7 @@
     </div>
   </div>
 </footer>
-{% if page.layout == "page" or page.layout == "page-videobg" %}
+{% if page.layout == "page" or page.layout contains "page" %}
 <script>
   fixPageShort();
   function fixPageShort() {

@@ -45,3 +45,5 @@ formspree_form_path: "f/mqaqdywo"
 
 # whitelist:
 #   - url_filter
+
+permalink: pretty

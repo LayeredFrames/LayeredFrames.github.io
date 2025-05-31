@@ -43,7 +43,7 @@
   <link href="/assets/css/agency.css" rel="stylesheet" />
 
   <!-- Page container change top padding when nav shrinks -->
-  {% if page.layout == "page" or page.layout == "page-videobg" %}
+  {% if page.layout == "page" or page.layout contains "page" %}
   <style>
     #pagecontainer {
       padding-top: 150px;
@@ -54,5 +54,8 @@
       }
     }
   </style>
+  {% else %}
+  <style>{{ page.layout }}</style>
   {% endif %}
+  
 </head>

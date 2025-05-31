@@ -1,5 +1,5 @@
 // Styling for the portfolio section
-#portfolio {
+
   .portfolio-row-justify-center-container{
     justify-content: center;
     // max-width: 1400px;
@@ -10,11 +10,23 @@
     padding-right: 50px;
     max-width: 1400px;
   }
+  .portfolio-item-container{
+    perspective: 1000px; // Enables 3D perspective
+    transform-style: preserve-3d;
+  }
   .portfolio-item {
     right: 0;
     margin: 0px 0px 16px 0px;
     width: auto !important;
-    max-width: 300px;
+    // max-width: 300px;
+    -webkit-transition: transform ease 0.25s;
+    -moz-transition: transform ease 0.25s;
+    transition: transform ease 0.25s;
+    // &:hover {
+    //   transform: scale(1.05);
+    //   // transform: rotate3d(1, 0, 0, 10deg);
+    //   // transform: matrix3d();
+    // }
     .portfolio-link {
       position: relative;
       display: block;
@@ -90,7 +102,7 @@
   * {
     z-index: 2;
   }
-}
+
 // @media (min-width: 767px) {
 //   #portfolio {
 //     .portfolio-item {
