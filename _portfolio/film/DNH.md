@@ -6,6 +6,7 @@ alt: DNH
 category: film
 homepage: true
 order: 3
+date: 12-5-2025
 
 caption:
   role: VFX Supervision and Compositing

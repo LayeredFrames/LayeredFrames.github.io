@@ -5,6 +5,7 @@ subtitle: A feature film by Thomas Vinterberg
 # alt: Shirts on a hanger
 category: film
 homepage: true
+date: 28-5-2025
 order: 1
 
 caption:

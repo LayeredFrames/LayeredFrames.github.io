@@ -11,17 +11,20 @@
     max-width: 1400px;
   }
   .portfolio-item-container{
-    perspective: 1000px; // Enables 3D perspective
+    perspective: 800px; // Enables 3D perspective
     transform-style: preserve-3d;
+    -webkit-transition: transform ease 0.5s;
+    -moz-transition: transform ease 0.5s;
+    transition: transform ease 0.5s;
   }
   .portfolio-item {
     right: 0;
     margin: 0px 0px 16px 0px;
     width: auto !important;
     // max-width: 300px;
-    -webkit-transition: transform ease 0.25s;
-    -moz-transition: transform ease 0.25s;
-    transition: transform ease 0.25s;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
     // &:hover {
     //   transform: scale(1.05);
     //   // transform: rotate3d(1, 0, 0, 10deg);
