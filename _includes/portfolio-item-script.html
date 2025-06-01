@@ -1,33 +1,84 @@
 <script>
     document.querySelectorAll('.portfolio-item-container').forEach(container => {
-      container.addEventListener('mousemove', (e) => {
-          item = container.querySelector('.portfolio-item');
-        container.style.transform = 'scale({{ include.scale | default: 1.03 }})'
-        item.style.webkitTransition = 'none'; // Smooth transition for transform
-        item.style.mozTransition = 'none'; // Smooth transition for transform
-        item.style.transition = 'none';
-        const rect = item.getBoundingClientRect();
-        const x = e.clientX - rect.left; // Mouse X position relative to the item
-        const y = e.clientY - rect.top;  // Mouse Y position relative to the item
-    
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-    
-        const rotateX = ((y - centerY) / centerY) * {{ include.rotation | default: 10 }}; // Rotate based on Y position
-        const rotateY = ((x - centerX) / centerX) * -{{ include.rotation | default: 10 }}; // Rotate based on X position
-    
-        item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`; // Apply rotation and scale
+        let animationFrameID;
+        const updateShading = (item) => {
+            // Get the current opacity of the portfolio-hover element
+            const hoverElement = container.querySelector('.portfolio-hover');
+            const effectItems = container.querySelectorAll('.portfolio-shading');
+            const hoverOpacity = parseFloat(getComputedStyle(hoverElement).opacity);
+
+            const brightnessOffset = 0.2; // Adjust this value to control the brightness effect
+            const contrastOffset = -0.4; // Adjust this value to control the contrast effect
+            const maxDistance = Math.sqrt(2); // Maximum distance from center
+            const amount = (1 - (item.distanceToCenter / maxDistance)) * hoverOpacity; // Calculate amount based on distance to center
+            const brightness = 1 + (amount * brightnessOffset); // Adjust brightness dynamically
+            const contrast = 1 + (amount * contrastOffset); // Adjust contrast dynamically
+
+            // Apply the filter to all effect items
+            effectItems.forEach(effectItem => {
+                effectItem.style.filter = `brightness(${brightness}) contrast(${contrast})`;
+            });
+
+            if (hoverElement.isTransitioning) {
+                // If a transition is in progress, cancel the current animation frame
+                requestAnimationFrame(updateShading.bind(null, item, hoverElement));
+            }
+        };
+        container.addEventListener('mousemove', (e) => {
+            //const hoverElement = container.querySelector('.portfolio-hover');
+            item = container.querySelector('.portfolio-item');
+            container.style.transform = 'scale({{ include.scale | default: 1.03 }})'
+            item.style.webkitTransition = 'none';
+            item.style.mozTransition = 'none';
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left; // Mouse X position relative to the item
+            const y = e.clientY - rect.top;  // Mouse Y position relative to the item
+        
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const offsetX = ((x - centerX) / centerX); // Normalize to -1 to 1
+            const offsetY = ((y - centerY) / centerY); // Normalize to -1 to 1
+
+            // Adjust rotation
+            const rotateX = offsetY * {{ include.rotation | default: 10 }};
+            const rotateY = offsetX * -{{ include.rotation | default: 10 }};
+            item.distanceToCenter = Math.sqrt(Math.pow(offsetX, 2) + Math.pow(offsetY, 2)); // Calculate distance to center
+
+            item.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+            // Add reflective shading using filter
+            updateShading(item);
+
+            portfolio_link = container.querySelector('.portfolio-link');
+            portfolio_link.style.boxShadow = '2px 4px 8px rgba(0, 0, 0, .1), 0 8px 12px rgba(0, 0, 0, .15)'; // Add shadow on hover
       });
-    
       container.addEventListener('mouseleave', () => {
         item = container.querySelector('.portfolio-item');
+        portfolio_link = container.querySelector('.portfolio-link');
         // item.style.webkitTransition = 'transform 0.3s ease'; // Smooth transition for reset
         item.style.webkitTransition = 'transform 0.8s ease'; // Smooth transition for reset
         item.style.mozTransition = 'transform 0.8s ease'; // Smooth transition for reset
         item.style.transition = 'transform 0.8s ease'; // Smooth transition for reset
         item.style.transform = 'rotateX(0deg) rotateY(0deg)'; // Reset rotation
         container.style.transform = 'scale(1)'; // Reset scale
+        portfolio_link.style.boxShadow = '0 2px 2px rgba(0, 0, 0, .12), 0 4px 4px rgba(0, 0, 0, .2)'; // Reset shadow
+        // item.style.filter = 'brightness(1) contrast(1)'; // Reset filter
+        effectItems = container.querySelectorAll('.portfolio-shading');
+                    effectItems.forEach(effectItem => {
+                effectItem.style.filter = `brightness(1) contrast(1)`;
+            });
       });
+
+    const hoverElement = container.querySelector('.portfolio-hover');
+
+    hoverElement.addEventListener('transitionstart', (e) => {
+       hoverElement.isTransitioning = true; // Set a flag to indicate transition start
     });
-    </script>
+
+    hoverElement.addEventListener('transitionend', (e) => {
+        hoverElement.isTransitioning = false; // Reset the flag when transition ends
+    });
+    });
+</script>
 

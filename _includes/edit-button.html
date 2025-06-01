@@ -1,0 +1,22 @@
+{% if jekyll.environment == "development" %}<style>
+.edit-button {
+    display: inline;
+  background-color: transparent;
+  color:white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.5;
+  &:active,
+  &:focus,
+  &:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  }
+}
+</style>
+<button class="edit-button" data-file="{{ include.path }}"><i class="far fa-edit"></i></button>{% endif %}

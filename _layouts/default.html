@@ -25,6 +25,9 @@
 
 	  <!-- Custom scripts -->
 	  <script src="/assets/js/video_comparison.js"></script>
+	  {% if jekyll.environment == "development" %}
+	  <script src="/assets/js/editfile.js"></script>
+	  {% endif %}
 
   </body>
 </html>

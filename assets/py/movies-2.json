@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Where We Stay",
+        "year": 2024,
+        "role": "visual effects supervisor",
+        "movie_id": "tt28131010",
+        "director": "Florence Bouvy",
+        "cover_url": "https://m.media-amazon.com/images/M/MV5BZjFjN2QyYTItMWUwZi00OTRlLWEwNDItNWU3ODU1MmJlZTRiXkEyXkFqcGc@.jpg",
+        "plot_outline": "",
+        "videos": [],
+        "date": null
+    },
+    {
+        "title": "Laatste ronde",
+        "year": 2024,
+        "role": "visual effects supervisor",
+        "movie_id": "tt28491190",
+        "director": "Boris Paval Conen",
+        "cover_url": "https://m.media-amazon.com/images/M/MV5BZDg4ZjFiZDgtYzkyMy00YjRkLTgxMjgtMmYwZDMwYTRjYTAzXkEyXkFqcGc@.jpg",
+        "plot_outline": "",
+        "videos": [
+            "http://www.imdb.com/title/tt28491190/videoplayer/vi4146578969",
+            "http://www.imdb.com/title/tt28491190/videoplayer/vi3850552857"
+        ],
+        "date": "16 May 2024 (Netherlands)"
+    },
+    {
+        "title": "Swanenburg",
+        "year": 2021,
+        "role": "visual effects supervisor",
+        "movie_id": "tt11935214",
+        "director": "",
+        "cover_url": "https://m.media-amazon.com/images/M/MV5BZWNhN2E0NjMtZGY4Yy00YmRmLWFjMDYtNjJjZDE3N2Q2MDI5XkEyXkFqcGc@.jpg",
+        "plot_outline": "When patriarch Jack Praal is confronted with his biggest fear and his youngest son Dirk is linked to a woman's death, the family gets trapped in a web of intrigue and betrayal. During the course of five weeks, the series follows the family members, who put their own interests aside in order to save everything. But not everyone is playing a fair game, which seems to result in the inevitable downfall of the once-close Praal family.",
+        "videos": [
+            "http://www.imdb.com/title/tt11935214/videoplayer/vi3013199385",
+            "http://www.imdb.com/title/tt11935214/videoplayer/vi3878076441"
+        ],
+        "date": null
+    },
+    {
+        "title": "Imago",
+        "year": 2023,
+        "role": "visual effects supervisor",
+        "movie_id": "tt14417122",
+        "director": "Olga Chajdas",
+        "cover_url": "https://m.media-amazon.com/images/M/MV5BNjVmYTI0YzktZjE4MC00MTZhLWFlYzgtYzkyMjhkNTU3ODhmXkEyXkFqcGc@.jpg",
+        "plot_outline": "It is 1987 and the wind of change will soon also be sweeping across communist Poland. Ela is a young woman seeking refuge from the insipidness of a life hallowed by the regime, mixing with artists on the alternative scene, singing in clubs with her post-punk band, and attending alcohol-fuelled parties... In her second film director Olga Chajdas summons up vital energy to invigorate the music scene of the Baltic Tricity and, aided by the charismatic actress and co-scripter Lena G\u00f3ra, she offers the viewer a vivid portrait of a multilayered character - an inspirational artist forever enveloped in cigarette smoke, a woman struggling with her inner demons, yet also a fragile creature yearning for motherly love.",
+        "videos": [],
+        "date": null
+    }
+]

@@ -1,48 +1,51 @@
 
 <div class="row portfolio-row-justify-center-container">
-<div class="row portfolio-row-justify-center">
-{% assign projects = site.portfolio | sort:"order" %}
-{% for project in projects %}
-{% if include.homepage == false or include.homepage == nil or project.homepage %}
-{% assign showonpage = true %}
-{% else %}
-{% assign showonpage = false %}
-{% endif %}
-
-{% if include.category == nil or project.category == include.category %}
-{% assign showcategory = true %}
-{% else %}
-{% assign showcategory = false %}
-{% endif %}
-
- {% if showonpage and showcategory %}
-  <div class="portfolio-item-container">
-  <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width | default: 250 }}px">
-    <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
-      {% if project.caption.title %}
-      <div class="portfolio-title">{{ project.caption.title }}</div>
-      {% endif %}
-      <div class="portfolio-hover">
-        {% if project.caption.role %}
-          <div class="portfolio-caption">
-            <!-- <p>Role:<p> -->
-            <p class="text-muted">{{ project.caption.role }}</p>
-          </div>
+  <div class="row portfolio-row-justify-center">
+  {% assign projects = site.portfolio | sort:"order" %}
+  {% for project in projects %}
+  {% if include.homepage == false or include.homepage == nil or project.homepage %}
+  {% assign showonpage = true %}
+  {% else %}
+  {% assign showonpage = false %}
+  {% endif %}
+  
+  {% if include.category == nil or project.category == include.category %}
+  {% assign showcategory = true %}
+  {% else %}
+  {% assign showcategory = false %}
+  {% endif %}
+  
+   {% if showonpage and showcategory %}
+    <div class="portfolio-item-container">
+    <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width | default: 250 }}px">
+      <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
+        {% if project.caption.title %}
+        <div class="portfolio-title">{{ project.caption.title }}</div>
         {% endif %}
-        <div class="portfolio-hover-content">
-          <i class="{{ site.data.style.portfolio-icon | default: "fas fa-plus fa-x" }}"></i>
+        <div class="portfolio-hover">
+          <div class="portfolio-shading"></div>
+          {% if project.caption.role %}
+            <div class="portfolio-caption">
+              <!-- <p>Role:<p> -->
+              <p class="text-muted">{{ project.caption.role }}</p>
+            </div>
+          {% endif %}
+          <div class="portfolio-hover-content">
+            <i class="{{ site.data.style.portfolio-icon | default: "fas fa-plus fa-x" }}"></i>
+          </div>
         </div>
+        <div class="portfolio-shading">
+        <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
       </div>
-      <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
-    </a>
+      </a>
+    </div>
+    </div>
+  {% endif %}
+  {% endfor %}
+  {% if include.more %}
+  <div class="col-md-auto portfolio-item">
+      <a class="btn btn-classy" href="{{ include.more }}">More...</a>
+  </div>
+  {% endif %}
   </div>
   </div>
-{% endif %}
-{% endfor %}
-{% if include.more %}
-<div class="col-md-auto portfolio-item">
-    <a class="btn btn-classy" href="{{ include.more }}">More...</a>
-</div>
-{% endif %}
-</div>
-</div>

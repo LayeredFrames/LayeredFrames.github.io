@@ -12,12 +12,12 @@ caption:
   role: Job role
   thumbnail: https://placehold.co/272x394?text=Example+Project
 ---
-
 Use this area to describe your project. **Markdown** supported. This entry (project1.md) uses links for the image sources. All other projects in the portfolio use local images. Both work just fine! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 {% include video-compare.html before="/assets/video/before.mp4" after="/assets/video/after.mp4" autoplay=true %}
 
 {:.list-inline}
+
 
 - Date: January 2017
 - Client: Layered Frames
