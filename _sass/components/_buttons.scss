@@ -27,7 +27,6 @@
 
 .btn-classy {
   margin:10px;
-  backdrop-filter: blur(10px) !important;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -52,5 +51,37 @@
     opacity: 1;
     color:white;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+}
+
+.imdb-link {
+  font-size: 40px;
+  margin:0px 10px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  // outline: none;
+  opacity: 0.5;
+  background:none;
+  text-decoration: none;
+  margin-bottom: 0px !important;
+  &:active,
+  &:focus,
+  &:hover {
+    opacity: 1;
+    color:white;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    text-decoration: none
+  }
+  p {
+    @include heading-font;
+    font-size: 20px;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom: 0px !important;
+    // margin-bottom:-20px !important;
+    // line-height: 5px;
   }
 }

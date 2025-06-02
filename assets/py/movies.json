@@ -1,7 +1,7 @@
 [
     {
         "title": "Watching Mr. Pearson - IMDb",
-        "year": "Visual Effects Supervisor",
+        "year": null,
         "role": "Visual Effects Supervisor",
         "movie_id": "tt35377239",
         "director": "Dillon Bentlage",
@@ -158,7 +158,7 @@
     {
         "title": "Bon Bini Holland 2",
         "year": 2018,
-        "role": "digital compositor: Storm Post Production",
+        "role": "digital compositor",
         "movie_id": "tt7295378",
         "director": "Jon Karthaus",
         "cover_url": "https://m.media-amazon.com/images/M/MV5BYTQ0OWVlMWQtZDdiYy00MTM5LWE5NTEtOGJmYTcwMGZlYjcxXkEyXkFqcGc@.jpg",
@@ -182,7 +182,7 @@
     {
         "title": "Men from Mars",
         "year": 2018,
-        "role": "digital compositor: Storm Post Production",
+        "role": "digital compositor",
         "movie_id": "tt6868684",
         "director": "Hans Somers",
         "cover_url": "https://m.media-amazon.com/images/M/MV5BNjM0MzgwN2EtY2U4Ny00ZWEwLTlhN2YtYjQ0ZmE3NDgyOGZmXkEyXkFqcGc@.jpg",

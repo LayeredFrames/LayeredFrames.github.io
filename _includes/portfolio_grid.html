@@ -1,15 +1,25 @@
 
+<!-- Portfolio Grid -->
+
+{% if site.locale and site.locale != "" and site.locale != nil %}
+{% assign categories=site.data.sitetext[site.locale].portfolio.categories %}
+{% else %}
+{% assign categories=site.sitetext.portfolio.categories %}
+{% endif %}
+
 <div class="row portfolio-row-justify-center-container">
-  <div class="row portfolio-row-justify-center">
-  {% assign projects = site.portfolio | sort:"order" %}
-  {% for project in projects %}
-  {% if include.homepage == false or include.homepage == nil or project.homepage %}
+  <div class="row portfolio-row-justify-center"{% if include.row_width %} style="max-width: {{ include.row_width }}px;"{% endif %}>
+
+
+  {% assign projects = site.portfolio | sort: "date", "first" | reverse %}
+  {% for project in projects  %}
+  {% if project.hidden != true and (include.homepage == false or include.homepage == nil or project.homepage) %}
   {% assign showonpage = true %}
   {% else %}
   {% assign showonpage = false %}
   {% endif %}
   
-  {% if include.category == nil or project.category == include.category %}
+  {% if include.category == nil or categories[include.category] contains project.category %}
   {% assign showcategory = true %}
   {% else %}
   {% assign showcategory = false %}
@@ -17,7 +27,7 @@
   
    {% if showonpage and showcategory %}
     <div class="portfolio-item-container">
-    <div class="col-md-auto portfolio-item" style="max-width: {{ include.max-width | default: 250 }}px">
+    <div class="col-md-auto portfolio-item" style="max-width: {{ include.max_width | default: 250 }}px">
       <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
         {% if project.caption.title %}
         <div class="portfolio-title">{{ project.caption.title }}</div>
@@ -37,6 +47,9 @@
         <div class="portfolio-shading">
         <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
       </div>
+        {% if project.breakdown and include.homepage != true %}
+        <div class="ribbon ribbon-top-left"><span>Breakdowns</span></div>
+        {% endif %}
       </a>
     </div>
     </div>

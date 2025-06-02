@@ -28,11 +28,21 @@
               <h2 class="project-title">{{ project.title }}{% include edit-button.html path=project.path %}</h2>
               <p class="item-intro text-muted">{{ project.subtitle }}</p>
               {% if project.image %}
+              <!-- <div> -->
               <img
                 class="img-fluid d-block mx-auto"
                 src="{{ project.image }}"
                 alt="{{ project.alt }}"
               />
+              <div class="project-image-caption">
+                {% if project.imdb_url %}
+                <a class="imdb-link fab fa-imdb" target="_blank" rel="noopener noreferrer" href="{{ project.imdb_url }}"><p>IMDb page</p></a>
+                {% endif %}
+                {% if project.video_url %}
+                <a class="imdb-link fab fa-youtube" target="_blank" rel="noopener noreferrer" href="{{ project.video_url }}"><p>Watch trailer</p></a>
+                {% endif %}
+              </div>
+              <!-- </div> -->
               {% endif %}
               <div class="project-content"><p>{{ project.content }}</p></div>
               <button

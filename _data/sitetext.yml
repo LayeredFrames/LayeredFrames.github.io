@@ -41,6 +41,10 @@ en: &DEFAULT_EN
     text: "Click on a project to see more"
     section: portfolio
     closebutton: "Close"
+    categories:
+      film: ["Film", "TV Movie"]
+      tvc: ["Commercial", "TVC"]
+      episodic: ["TV Series", "Episodic", "Series"]
 
   # timeline:
   #   title: "Timeline"
