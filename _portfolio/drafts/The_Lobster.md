@@ -1,20 +1,19 @@
 ---
 title: "The Lobster"
 subtitle: "Film directed by Yorgos Lanthimos"
-image: assets/img/portfolio-covers/The_Lobster_tt3464902.webp
+date: May 15, 2015
+image: ./assets/img/portfolio-covers/The_Lobster_tt3464902.webp
 alt: The_Lobster
 category: Film
-homepage: true
-date: May 15, 2015
-year: 2015
 imdb_url: https://www.imdb.com/title/tt3464902
 video_url: http://www.imdb.com/title/tt3464902/videoplayer/vi2703471385
-# order: 0
+homepage: true
 hidden: false
-
+breakdown: false
+order: 1
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/The_Lobster_tt3464902.webp
+  thumbnail: ./assets/img/portfolio-covers/The_Lobster_tt3464902.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

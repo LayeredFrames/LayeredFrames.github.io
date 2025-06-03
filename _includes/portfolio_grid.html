@@ -26,7 +26,7 @@
   {% endif %}
   
    {% if showonpage and showcategory %}
-    <div class="portfolio-item-container">
+    <div class="portfolio-item-container" has_breakdown={% if project.breakdown %}true{% else %}false{% endif %}>
     <div class="col-md-auto portfolio-item" style="max-width: {{ include.max_width | default: 250 }}px">
       <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
         {% if project.caption.title %}
@@ -47,7 +47,7 @@
         <div class="portfolio-shading">
         <img class="img-fluid" src="{{ project.caption.thumbnail }}" alt="">
       </div>
-        {% if project.breakdown and include.homepage != true %}
+        {% if project.breakdown and include.ribbons %}
         <div class="ribbon ribbon-top-left"><span>Breakdowns</span></div>
         {% endif %}
       </a>

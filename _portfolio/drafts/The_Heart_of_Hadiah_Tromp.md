@@ -1,20 +1,19 @@
 ---
 title: "The Heart of Hadiah Tromp"
 subtitle: "Film directed by Erik de Bruyn"
-image: assets/img/portfolio-covers/The_Heart_of_Hadiah_Tromp_tt7188568.webp
+date: February 14, 2018
+image: ./assets/img/portfolio-covers/The_Heart_of_Hadiah_Tromp_tt7188568.webp
 alt: The_Heart_of_Hadiah_Tromp
 category: Film
-homepage: false
-date: February 14, 2018
-year: 2018
 imdb_url: https://www.imdb.com/title/tt7188568
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Compositor"
-  thumbnail: assets/img/portfolio-covers/The_Heart_of_Hadiah_Tromp_tt7188568.webp
+  thumbnail: ./assets/img/portfolio-covers/The_Heart_of_Hadiah_Tromp_tt7188568.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

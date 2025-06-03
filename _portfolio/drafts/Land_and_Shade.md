@@ -1,20 +1,19 @@
 ---
 title: "Land and Shade"
 subtitle: "Film directed by César Augusto Acevedo"
-image: assets/img/portfolio-covers/Land_and_Shade_tt4663992.webp
+date: May 18, 2015
+image: ./assets/img/portfolio-covers/Land_and_Shade_tt4663992.webp
 alt: Land_and_Shade
 category: Film
-homepage: false
-date: May 18, 2015
-year: 2015
 imdb_url: https://www.imdb.com/title/tt4663992
 video_url: http://www.imdb.com/title/tt4663992/videoplayer/vi751155737
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Land_and_Shade_tt4663992.webp
+  thumbnail: ./assets/img/portfolio-covers/Land_and_Shade_tt4663992.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

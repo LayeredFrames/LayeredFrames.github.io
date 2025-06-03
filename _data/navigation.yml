@@ -28,11 +28,11 @@ en: &DEFAULT_EN
         - title: "All"
           url: /#portfolio
         - title: Film
-          url: /film-portfolio
+          url: /film
         - title: Commercial
-          url: /commercial-portfolio
-        - title: Other
-          url: /other-portfolio
+          url: /tvc
+        - title: Episodic
+          url: /episodic
     # - title: "Timeline"
     #   section: timeline
     # - title: "Team"

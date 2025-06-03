@@ -1,20 +1,19 @@
 ---
 title: "Dansen op de vulkaan"
 subtitle: "Film directed by Adriënne Wurpel"
-image: assets/img/portfolio-covers/Dansen_op_de_vulkaan_tt3323318.webp
+date: October 30, 2014
+image: ./assets/img/portfolio-covers/Dansen_op_de_vulkaan_tt3323318.webp
 alt: Dansen_op_de_vulkaan
 category: Film
-homepage: false
-date: October 30, 2014
-year: 2014
 imdb_url: https://www.imdb.com/title/tt3323318
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Dansen_op_de_vulkaan_tt3323318.webp
+  thumbnail: ./assets/img/portfolio-covers/Dansen_op_de_vulkaan_tt3323318.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

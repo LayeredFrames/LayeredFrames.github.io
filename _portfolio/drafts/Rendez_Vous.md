@@ -1,20 +1,19 @@
 ---
 title: "Rendez-Vous"
 subtitle: "Film directed by Antoinette Beumer"
-image: assets/img/portfolio-covers/Rendez-Vous_tt3755362.webp
-alt: Rendez-Vous
-category: Film
-homepage: false
 date: June 4, 2015
-year: 2015
+image: ./assets/img/portfolio-covers/Rendez_Vous_tt3755362.webp
+alt: Rendez_Vous
+category: Film
 imdb_url: https://www.imdb.com/title/tt3755362
 video_url: http://www.imdb.com/title/tt3755362/videoplayer/vi1619310873
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Rendez-Vous_tt3755362.webp
+  thumbnail: ./assets/img/portfolio-covers/Rendez_Vous_tt3755362.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

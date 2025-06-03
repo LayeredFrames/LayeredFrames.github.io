@@ -1,21 +1,19 @@
 ---
 title: "Another Round"
 subtitle: "Film directed by Thomas Vinterberg"
-image: assets/img/portfolio-covers/Another_Round_tt10288566.webp
+date: September 12, 2020
+image: ./assets/img/portfolio-covers/Another_Round_tt10288566.webp
 alt: Another_Round
 category: Film
-homepage: true
-date: September 12, 2020
-year: 2020
 imdb_url: https://www.imdb.com/title/tt10288566
 video_url: http://www.imdb.com/title/tt10288566/videoplayer/vi4070162713
-# order: 0
+homepage: true
 hidden: false
-breakdown: true
-
+breakdown: false
+order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: assets/img/portfolio-covers/Another_Round_tt10288566.webp
+  thumbnail: ./assets/img/portfolio-covers/Another_Round_tt10288566.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

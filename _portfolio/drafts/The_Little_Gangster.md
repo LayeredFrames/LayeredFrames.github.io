@@ -1,20 +1,19 @@
 ---
 title: "The Little Gangster"
 subtitle: "Film directed by Arne Toonen, Arent Jack"
-image: assets/img/portfolio-covers/The_Little_Gangster_tt3845822.webp
+date: April 19, 2015
+image: ./assets/img/portfolio-covers/The_Little_Gangster_tt3845822.webp
 alt: The_Little_Gangster
 category: Film
-homepage: false
-date: April 19, 2015
-year: 2015
 imdb_url: https://www.imdb.com/title/tt3845822
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/The_Little_Gangster_tt3845822.webp
+  thumbnail: ./assets/img/portfolio-covers/The_Little_Gangster_tt3845822.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

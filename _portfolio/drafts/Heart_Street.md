@@ -1,20 +1,19 @@
 ---
 title: "Heart Street"
 subtitle: "Film directed by Sanne Vogel"
-image: assets/img/portfolio-covers/Heart_Street_tt3171886.webp
+date: March 13, 2014
+image: ./assets/img/portfolio-covers/Heart_Street_tt3171886.webp
 alt: Heart_Street
 category: Film
-homepage: false
-date: March 13, 2014
-year: 2014
 imdb_url: https://www.imdb.com/title/tt3171886
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Heart_Street_tt3171886.webp
+  thumbnail: ./assets/img/portfolio-covers/Heart_Street_tt3171886.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

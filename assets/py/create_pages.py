@@ -119,9 +119,3 @@ for movie in movies_data:
     with open(f'{drafts_folder}/{safe_filename(movie["title"])}.md', 'w') as page_file:
         page_file.write(page_content)
 
-print(categories)
-# # Generate pages for each movie
-# for movie in movies_data:
-#     page_content = template
-#     for key, value in movie.items():
-#         page_content = page_content.replace(f'{{{{{key}}}}}', str(value))

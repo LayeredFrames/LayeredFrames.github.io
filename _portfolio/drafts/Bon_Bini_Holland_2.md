@@ -1,20 +1,19 @@
 ---
 title: "Bon Bini Holland 2"
 subtitle: "Film directed by Jon Karthaus"
-image: assets/img/portfolio-covers/Bon_Bini_Holland_2_tt7295378.webp
+date: December 13, 2018
+image: ./assets/img/portfolio-covers/Bon_Bini_Holland_2_tt7295378.webp
 alt: Bon_Bini_Holland_2
 category: Film
-homepage: false
-date: December 13, 2018
-year: 2018
 imdb_url: https://www.imdb.com/title/tt7295378
 video_url: http://www.imdb.com/title/tt7295378/videoplayer/vi1479591705
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Bon_Bini_Holland_2_tt7295378.webp
+  thumbnail: ./assets/img/portfolio-covers/Bon_Bini_Holland_2_tt7295378.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

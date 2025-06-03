@@ -11,4 +11,13 @@ document.getElementById("page-top").className="bg-dark";
 
 <div id="pagecontainer">
 {{ content }}
+
+{% if page.breakdown-toggle %}
+{% include breakdowns-switch.html %}
+{% endif %}
+
+{% include portfolio_grid.html category=page.category max_width=page.max-width ribbons=page.breakdown-ribbons %}
+{% include portfolio-item-script.html rotation=10 %}
+{% include modals.html %}
+
 </div>

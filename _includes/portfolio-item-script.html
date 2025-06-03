@@ -10,7 +10,7 @@
             const brightnessOffset = 0.2; // Adjust this value to control the brightness effect
             const contrastOffset = -0.4; // Adjust this value to control the contrast effect
             const maxDistance = Math.sqrt(2); // Maximum distance from center
-            const amount = (1 - (item.distanceToCenter / maxDistance)) * hoverOpacity; // Calculate amount based on distance to center
+            const amount = ((item.distanceToCenter / maxDistance)) * hoverOpacity; // Calculate amount based on distance to center
             const brightness = 1 + (amount * brightnessOffset); // Adjust brightness dynamically
             const contrast = 1 + (amount * contrastOffset); // Adjust contrast dynamically
 

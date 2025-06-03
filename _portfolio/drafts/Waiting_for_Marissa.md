@@ -1,20 +1,19 @@
 ---
 title: "Waiting for Marissa"
 subtitle: "TV Movie directed by Rolf van Eijk"
-image: assets/img/portfolio-covers/Waiting_for_Marissa_tt3164054.webp
+date: December 30, 2013
+image: ./assets/img/portfolio-covers/Waiting_for_Marissa_tt3164054.webp
 alt: Waiting_for_Marissa
 category: TV Movie
-homepage: false
-date: December 30, 2013
-year: 2013
 imdb_url: https://www.imdb.com/title/tt3164054
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Waiting_for_Marissa_tt3164054.webp
+  thumbnail: ./assets/img/portfolio-covers/Waiting_for_Marissa_tt3164054.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

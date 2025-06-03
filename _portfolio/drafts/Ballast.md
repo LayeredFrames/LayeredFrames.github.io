@@ -1,20 +1,19 @@
 ---
 title: "Ballast"
 subtitle: "Film directed by Mirjam de With"
-image: assets/img/portfolio-covers/Ballast_tt2176450.webp
+date: September 15, 2012
+image: ./assets/img/portfolio-covers/Ballast_tt2176450.webp
 alt: Ballast
 category: Film
-homepage: false
-date: September 15, 2012
-year: 2012
 imdb_url: https://www.imdb.com/title/tt2176450
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Ballast_tt2176450.webp
+  thumbnail: ./assets/img/portfolio-covers/Ballast_tt2176450.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

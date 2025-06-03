@@ -1,17 +1,16 @@
 ---
 title: "Watching Mr. Pearson - IMDb"
 subtitle: "Film directed by Dillon Bentlage"
-image: https://placehold.co/434x620?text=Watching+Mr.+Pearson+-+IMDb
-alt: Watching_Mr._Pearson_-_IMDb
-category: Film
-homepage: false
 
-year: None
+image: https://placehold.co/434x620?text=Watching+Mr.+Pearson+-+IMDb
+alt: Watching_Mr_Pearson_IMDb
+category: Film
 imdb_url: https://www.imdb.com/title/tt35377239
 video_url: 
-# order: 0
+homepage: false
 hidden: true
-
+breakdown: false
+# order: 0
 caption:
   role: "Visual Effects Supervisor"
   thumbnail: https://placehold.co/434x620?text=Watching+Mr.+Pearson+-+IMDb

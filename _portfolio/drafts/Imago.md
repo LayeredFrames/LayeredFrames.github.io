@@ -1,20 +1,19 @@
 ---
 title: "Imago"
 subtitle: "Film directed by Olga Chajdas"
-image: assets/img/portfolio-covers/Imago_tt14417122.webp
+date: July 2, 2023
+image: ./assets/img/portfolio-covers/Imago_tt14417122.webp
 alt: Imago
 category: Film
-homepage: false
-date: July 2, 2023
-year: 2023
 imdb_url: https://www.imdb.com/title/tt14417122
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: assets/img/portfolio-covers/Imago_tt14417122.webp
+  thumbnail: ./assets/img/portfolio-covers/Imago_tt14417122.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

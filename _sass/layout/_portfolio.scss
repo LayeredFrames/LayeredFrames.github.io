@@ -40,6 +40,10 @@
       -moz-transition: box-shadow ease 0.5s;
       transition: box-shadow ease 0.5s;
 
+      &:hover .portfolio-hover {
+        opacity: 1; /* Trigger the hover effect on the child element */
+      }
+
       
       .portfolio-hover {
         position: absolute;
@@ -51,12 +55,6 @@
         -moz-transition: opacity ease 0.5s;
         transition: opacity ease 0.5s;
         opacity: 0;
-        // background: fade-out(black, 0.8);
-        &:hover {
-          // background: linear-gradient(310deg,rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.3) 100%);
-          // backdrop-filter: brightness(60%);
-          opacity: 1;
-        }
 
       .portfolio-shading{
         position: absolute;
@@ -162,6 +160,10 @@
   @include serif-font;
   color: $gray-600;
   padding-top:20px;
+}
+
+.breakdowns-switch {
+  padding: 20px 50px;
 }
 
 .portfolio-modal {

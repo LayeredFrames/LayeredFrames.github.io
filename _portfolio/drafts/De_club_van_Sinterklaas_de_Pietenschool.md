@@ -1,20 +1,19 @@
 ---
 title: "De club van Sinterklaas & de Pietenschool"
 subtitle: "Film directed by Melcher Hillmann"
-image: assets/img/portfolio-covers/De_club_van_Sinterklaas_&_de_Pietenschool_tt3005160.webp
-alt: De_club_van_Sinterklaas_&_de_Pietenschool
-category: Film
-homepage: false
 date: October 9, 2013
-year: 2013
+image: ./assets/img/portfolio-covers/De_club_van_Sinterklaas_de_Pietenschool_tt3005160.webp
+alt: De_club_van_Sinterklaas_de_Pietenschool
+category: Film
 imdb_url: https://www.imdb.com/title/tt3005160
 video_url: http://www.imdb.com/title/tt3005160/videoplayer/vi3209999897
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/De_club_van_Sinterklaas_&_de_Pietenschool_tt3005160.webp
+  thumbnail: ./assets/img/portfolio-covers/De_club_van_Sinterklaas_de_Pietenschool_tt3005160.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

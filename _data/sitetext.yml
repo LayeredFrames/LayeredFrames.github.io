@@ -44,7 +44,9 @@ en: &DEFAULT_EN
     categories:
       film: ["Film", "TV Movie"]
       tvc: ["Commercial", "TVC"]
-      episodic: ["TV Series", "Episodic", "Series"]
+      episodic: ["TV Series", "Episodic", "Series", "TV Mini Series"]
+      film-tv: ["Film", "TV Movie", "TV Series", "Episodic", "Series"]
+      all: ["Film", "TV Movie", "TV Series", "Episodic", "Series", "Commercial", "TVC"]
 
   # timeline:
   #   title: "Timeline"

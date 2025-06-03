@@ -1,20 +1,19 @@
 ---
 title: "Boy"
 subtitle: "Film directed by Tami Ravid"
-image: assets/img/portfolio-covers/Boy_tt2445032.webp
+date: September 29, 2012
+image: ./assets/img/portfolio-covers/Boy_tt2445032.webp
 alt: Boy
 category: Film
-homepage: false
-date: September 29, 2012
-year: 2012
 imdb_url: https://www.imdb.com/title/tt2445032
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Boy_tt2445032.webp
+  thumbnail: ./assets/img/portfolio-covers/Boy_tt2445032.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

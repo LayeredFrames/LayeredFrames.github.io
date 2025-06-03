@@ -1,20 +1,19 @@
 ---
 title: "Het mooiste wat er is"
 subtitle: "Film directed by Danyael Sugawara"
-image: assets/img/portfolio-covers/Het_mooiste_wat_er_is_tt4359602.webp
+date: January 31, 2015
+image: ./assets/img/portfolio-covers/Het_mooiste_wat_er_is_tt4359602.webp
 alt: Het_mooiste_wat_er_is
 category: Film
-homepage: false
-date: January 31, 2015
-year: 2015
 imdb_url: https://www.imdb.com/title/tt4359602
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: assets/img/portfolio-covers/Het_mooiste_wat_er_is_tt4359602.webp
+  thumbnail: ./assets/img/portfolio-covers/Het_mooiste_wat_er_is_tt4359602.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

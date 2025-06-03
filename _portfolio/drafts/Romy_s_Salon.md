@@ -1,20 +1,19 @@
 ---
 title: "Romy's Salon"
 subtitle: "Film directed by Mischa Kamp"
-image: assets/img/portfolio-covers/Romy's_Salon_tt7865162.webp
-alt: Romy's_Salon
-category: Film
-homepage: false
 date: July 18, 2019
-year: 2019
+image: ./assets/img/portfolio-covers/Romy_s_Salon_tt7865162.webp
+alt: Romy_s_Salon
+category: Film
 imdb_url: https://www.imdb.com/title/tt7865162
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: assets/img/portfolio-covers/Romy's_Salon_tt7865162.webp
+  thumbnail: ./assets/img/portfolio-covers/Romy_s_Salon_tt7865162.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

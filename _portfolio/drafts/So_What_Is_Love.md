@@ -1,20 +1,19 @@
 ---
 title: "So What Is Love"
 subtitle: "Film directed by Aniëlle Webster"
-image: assets/img/portfolio-covers/So_What_Is_Love_tt8458582.webp
+date: October 4, 2019
+image: ./assets/img/portfolio-covers/So_What_Is_Love_tt8458582.webp
 alt: So_What_Is_Love
 category: Film
-homepage: false
-date: October 4, 2019
-year: 2019
 imdb_url: https://www.imdb.com/title/tt8458582
 video_url: http://www.imdb.com/title/tt8458582/videoplayer/vi2221850905
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: assets/img/portfolio-covers/So_What_Is_Love_tt8458582.webp
+  thumbnail: ./assets/img/portfolio-covers/So_What_Is_Love_tt8458582.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

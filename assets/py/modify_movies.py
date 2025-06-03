@@ -63,13 +63,13 @@ def get_category(soup):
     
     return category
 
-def episodes(soup):
-    episodes_link = soup.find('a', href=lambda href: href and '/episodes/' in href)
+# def episodes(soup):
+#     episodes_link = soup.find('a', href=lambda href: href and '/episodes/' in href)
 
-    if episodes_link:
-        return episodes_link['href']
+#     if episodes_link:
+#         return episodes_link['href']
 
-    return None
+#     return None
 
 def get_seasons(soup):
     seasons = []

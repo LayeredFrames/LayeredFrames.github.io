@@ -1,20 +1,19 @@
 ---
 title: "Play It by Ear"
 subtitle: "TV Mini Series directed by "
-image: assets/img/portfolio-covers/Play_It_by_Ear_tt18560836.webp
+date: May 24, 2023
+image: ./assets/img/portfolio-covers/Play_It_by_Ear_tt18560836.webp
 alt: Play_It_by_Ear
 category: TV Mini Series
-homepage: false
-date: May 24, 2023
-year: 2023
 imdb_url: https://www.imdb.com/title/tt18560836
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Camera Operator"
-  thumbnail: assets/img/portfolio-covers/Play_It_by_Ear_tt18560836.webp
+  thumbnail: ./assets/img/portfolio-covers/Play_It_by_Ear_tt18560836.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

@@ -1,23 +1,22 @@
 ---
 title: "Where We Stay"
 subtitle: "Film directed by Florence Bouvy"
-image: assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
+date: June 21, 2024
+image: ./assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
 alt: Where_We_Stay
 category: Film
-homepage: false
-date: June 21, 2024
-year: 2024
 imdb_url: https://www.imdb.com/title/tt28131010
 video_url: 
-# order: 0
+homepage: false
 hidden: false
-
+breakdown: false
+# order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
+  thumbnail: ./assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 
 [{{ page.date | date: "%d %B %Y" | default: "IMDb" }}]({{ page.imdb_url }}/releaseinfo/){:target="_blank"}
 
-
+Longtime friends Carry and Daniel have never acknowledged their underlying feelings for each other. Now that Carry is dying, time is running out.
