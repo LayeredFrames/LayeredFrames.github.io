@@ -2,7 +2,7 @@
 title: "No Such Thing as Housewives"
 subtitle: "Film directed by Aniëlle Webster"
 date: December 21, 2017
-image: ./assets/img/portfolio-covers/No_Such_Thing_as_Housewives_tt5912150.webp
+image: /assets/img/portfolio-covers/No_Such_Thing_as_Housewives_tt5912150.webp
 alt: No_Such_Thing_as_Housewives
 category: Film
 imdb_url: https://www.imdb.com/title/tt5912150
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/No_Such_Thing_as_Housewives_tt5912150.webp
+  thumbnail: /assets/img/portfolio-covers/No_Such_Thing_as_Housewives_tt5912150.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

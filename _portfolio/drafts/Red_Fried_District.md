@@ -2,7 +2,7 @@
 title: "Red Fried District"
 subtitle: "Film directed by Flip Van der Kuil, Stephan Miras"
 date: September 2021
-image: ./assets/img/portfolio-covers/Red_Fried_District_tt13879782.webp
+image: /assets/img/portfolio-covers/Red_Fried_District_tt13879782.webp
 alt: Red_Fried_District
 category: Film
 imdb_url: https://www.imdb.com/title/tt13879782
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Red_Fried_District_tt13879782.webp
+  thumbnail: /assets/img/portfolio-covers/Red_Fried_District_tt13879782.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

@@ -2,7 +2,7 @@
 title: "Catastrophe"
 subtitle: "Film directed by Jamille van Wijngaarden"
 date: July 7, 2017
-image: ./assets/img/portfolio-covers/Catastrophe_tt6922038.webp
+image: /assets/img/portfolio-covers/Catastrophe_tt6922038.webp
 alt: Catastrophe
 category: Film
 imdb_url: https://www.imdb.com/title/tt6922038
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Compositing"
-  thumbnail: ./assets/img/portfolio-covers/Catastrophe_tt6922038.webp
+  thumbnail: /assets/img/portfolio-covers/Catastrophe_tt6922038.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

@@ -13,10 +13,10 @@ video.background {
   color:$white;
   // backgroundr: transparent;
   bottom:0px;
-  margin-left: 5vh;
-  margin-bottom: 5vh;
+  margin-left: 30px;
+  margin-bottom: 30px;
   position: absolute;
-  font-size: 30px;
+  font-size: 24px;
   font-style: italic;
   line-height: 22px;
   font-weight:normal;
@@ -28,7 +28,7 @@ video.background {
 }
 
 .videobg-role{
-  right:5vh;
+  right:30px;
   // color:$white;
   // // backgroundr: transparent;
   // bottom:0px;
@@ -42,4 +42,23 @@ video.background {
   // font-style: normal;
   // // @include serif-font;
   // @include heading-font;
+}
+
+@media (max-width: 768px) {
+  .videobg-caption {
+    font-size: 16px;
+    padding-bottom:20px;
+    margin-left: 20px;
+    margin-bottom: 20pxh;
+  }
+  .videobg-role {
+    // left:10px;
+    left:0;
+    padding-bottom:0;
+    text-align: left;
+    // font-size: 20px;
+    // right: none;
+    // left:10px;
+    // margin-left:0px;
+  }
 }

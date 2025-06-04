@@ -2,7 +2,7 @@
 title: "Wonderbroeders"
 subtitle: "Film directed by Johan Timmers"
 date: October 2, 2014
-image: ./assets/img/portfolio-covers/Wonderbroeders_tt3820346.webp
+image: /assets/img/portfolio-covers/Wonderbroeders_tt3820346.webp
 alt: Wonderbroeders
 category: Film
 imdb_url: https://www.imdb.com/title/tt3820346
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Wonderbroeders_tt3820346.webp
+  thumbnail: /assets/img/portfolio-covers/Wonderbroeders_tt3820346.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

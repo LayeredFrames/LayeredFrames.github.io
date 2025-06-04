@@ -713,5 +713,18 @@
         "category": "Film",
         "date": "July 2, 2023",
         "role": "Visual Effects Supervisor"
+    },
+    "tt30221618": {
+        "director": "",
+        "cover_url": "https://m.media-amazon.com/images/M/MV5BY2FiNmRjZGMtYzAwZS00YTlhLTk3ZjctODFmMGE2NmRkMmI1XkEyXkFqcGc@.jpg",
+        "plot_outline": "Tobias, a gifted hacker and his ambitious best friend Marco, intent on cracking into the tech billionaires club. They are plunged headfirst into the chaos of organized crime when they cross paths with the Irish mob.",
+        "videos": [
+            "http://www.imdb.com/title/tt30221618/videoplayer/vi2604517657"
+        ],
+        "title": "Safe Harbor",
+        "year": 2025,
+        "category": "TV Series",
+        "date": "January 10, 2025",
+        "role": "On set Supervisor"
     }
 }

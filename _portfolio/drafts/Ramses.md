@@ -2,7 +2,7 @@
 title: "Ramses"
 subtitle: "TV Mini Series directed by "
 date: January 11, 2014
-image: ./assets/img/portfolio-covers/Ramses_tt3089822.webp
+image: /assets/img/portfolio-covers/Ramses_tt3089822.webp
 alt: Ramses
 category: TV Mini Series
 imdb_url: https://www.imdb.com/title/tt3089822
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Ramses_tt3089822.webp
+  thumbnail: /assets/img/portfolio-covers/Ramses_tt3089822.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

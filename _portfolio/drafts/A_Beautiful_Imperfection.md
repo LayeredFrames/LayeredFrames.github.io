@@ -2,7 +2,7 @@
 title: "A Beautiful Imperfection"
 subtitle: "Film directed by Michiel van Erp"
 date: September 6, 2024
-image: ./assets/img/portfolio-covers/A_Beautiful_Imperfection_tt7458836.webp
+image: /assets/img/portfolio-covers/A_Beautiful_Imperfection_tt7458836.webp
 alt: A_Beautiful_Imperfection
 category: Film
 imdb_url: https://www.imdb.com/title/tt7458836
@@ -13,7 +13,7 @@ breakdown: false
 order: 4
 caption:
   role: "Vfx Supervisor Pre-Production"
-  thumbnail: ./assets/img/portfolio-covers/A_Beautiful_Imperfection_tt7458836.webp
+  thumbnail: /assets/img/portfolio-covers/A_Beautiful_Imperfection_tt7458836.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

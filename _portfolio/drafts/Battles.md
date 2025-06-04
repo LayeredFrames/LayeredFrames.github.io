@@ -2,7 +2,7 @@
 title: "Battles"
 subtitle: "Film directed by Isabelle Tollenaere"
 date: January 2015
-image: ./assets/img/portfolio-covers/Battles_tt4322004.webp
+image: /assets/img/portfolio-covers/Battles_tt4322004.webp
 alt: Battles
 category: Film
 imdb_url: https://www.imdb.com/title/tt4322004
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Battles_tt4322004.webp
+  thumbnail: /assets/img/portfolio-covers/Battles_tt4322004.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

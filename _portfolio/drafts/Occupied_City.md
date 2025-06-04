@@ -2,7 +2,7 @@
 title: "Occupied City"
 subtitle: "Film directed by Steve McQueen"
 date: May 17, 2023
-image: ./assets/img/portfolio-covers/Occupied_City_tt9573150.webp
+image: /assets/img/portfolio-covers/Occupied_City_tt9573150.webp
 alt: Occupied_City
 category: Film
 imdb_url: https://www.imdb.com/title/tt9573150
@@ -13,7 +13,7 @@ breakdown: false
 order: 2
 caption:
   role: "VFX Supervisor"
-  thumbnail: ./assets/img/portfolio-covers/Occupied_City_tt9573150.webp
+  thumbnail: /assets/img/portfolio-covers/Occupied_City_tt9573150.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

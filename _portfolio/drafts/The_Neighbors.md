@@ -2,7 +2,7 @@
 title: "The Neighbors"
 subtitle: "TV Series directed by "
 date: Fri, May 10, 2019
-image: ./assets/img/portfolio-covers/The_Neighbors_tt3996656.webp
+image: /assets/img/portfolio-covers/The_Neighbors_tt3996656.webp
 alt: The_Neighbors
 category: TV Series
 imdb_url: https://www.imdb.com/title/tt3996656
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/The_Neighbors_tt3996656.webp
+  thumbnail: /assets/img/portfolio-covers/The_Neighbors_tt3996656.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

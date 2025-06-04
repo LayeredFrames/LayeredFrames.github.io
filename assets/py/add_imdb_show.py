@@ -284,7 +284,8 @@ def add_md_file(show_id):
     show = show_db[show_id]
     create_md_file(show, show_id)
 
-add_md_file('tt9573150')
+# add_md_file('tt9573150')
+add_show('tt30221618', role='On set Supervisor')
 
 # print(os.path.abspath(show_db_path)
 

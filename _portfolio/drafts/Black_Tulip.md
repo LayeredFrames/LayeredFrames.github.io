@@ -2,7 +2,7 @@
 title: "Black Tulip"
 subtitle: "TV Series directed by "
 date: Fri, May 6, 2016
-image: ./assets/img/portfolio-covers/Black_Tulip_tt4283994.webp
+image: /assets/img/portfolio-covers/Black_Tulip_tt4283994.webp
 alt: Black_Tulip
 category: TV Series
 imdb_url: https://www.imdb.com/title/tt4283994
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Black_Tulip_tt4283994.webp
+  thumbnail: /assets/img/portfolio-covers/Black_Tulip_tt4283994.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

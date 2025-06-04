@@ -1,7 +1,7 @@
 ---
 title: Tele2 - Dit wil ik weken
 subtitle: A film by Steve McQueen
-image: https://images.pathe-thuis.nl/19228_1920x1080.jpg
+image: /assets/img/portfolio/tele2.png
 alt: OC
 category: Commercial
 homepage: true
@@ -9,7 +9,7 @@ order: 3
 
 caption:
   role: VFX Supervision and Compositing
-  thumbnail: assets\img\portfolio\tele2.png
+  thumbnail: /assets/img/portfolio/tele2.png
   title: Tele2 - Dit wil ik weken
 ---
 

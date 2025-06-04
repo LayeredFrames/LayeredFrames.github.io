@@ -19,6 +19,7 @@ def edit_file():
         subprocess.run(["code", "-n", file_path], check=True)
         return f"Opened {file_path} for editing", 200
     except Exception as e:
+        print(e)
         return str(e), 500
 
 if __name__ == '__main__':

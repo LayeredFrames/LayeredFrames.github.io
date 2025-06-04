@@ -2,7 +2,7 @@
 title: "Erbarme dich - Matthäus Passion Stories"
 subtitle: "Film directed by Ramón Gieling"
 date: January 25, 2015
-image: ./assets/img/portfolio-covers/Erbarme_dich_Matthäus_Passion_Stories_tt4362388.webp
+image: /assets/img/portfolio-covers/Erbarme_dich_Matthäus_Passion_Stories_tt4362388.webp
 alt: Erbarme_dich_Matthäus_Passion_Stories
 category: Film
 imdb_url: https://www.imdb.com/title/tt4362388
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Erbarme_dich_Matthäus_Passion_Stories_tt4362388.webp
+  thumbnail: /assets/img/portfolio-covers/Erbarme_dich_Matthäus_Passion_Stories_tt4362388.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

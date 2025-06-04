@@ -48,12 +48,12 @@ function initVideoElement(video)
 {
     video.playsinline = true;
     video.muted = true;
-    video.preload = 'auto'; //but do not set autoplay, because it deletes preload
+    video.preload = 'auto';
+    // video.autoplay= true; 
     //loadedmetadata is wrong because if we use it then we get endless loop
     video.onplaying = function(e)
     {
 		if (initRun) {
-			console.log("Testing")
 			initRun = false;
 			jQuery('#videoContainer').removeClass("pre-fade-in");
 			jQuery('#videoContainer').addClass("fade-in");
@@ -82,6 +82,18 @@ function initVideoElement(video)
         nextVideo.play();
     };
 }
+// videoObjects[0].initPlay = true; //set flag to init play
+// videoObjects[0].onloadeddata = function(e) {
+//     console.log("Video source loaded:", this.src);
+//     if (!(this.currentTime > 0 && this.readyState >= 2 && !this.paused) && this.initPlay) {
+//         jQuery('#videoContainer').removeClass("pre-fade-in");
+//         jQuery('#videoContainer').addClass("fade-in");
+//         // If the video is not playing, we can start it
+//         this.initPlay = false; // reset flag
+//         this.play();
+//         this.onloadeddata = null; // remove the event listener to prevent multiple calls
+//     }
 
+// };
 videoObjects[0].play();
 </script>

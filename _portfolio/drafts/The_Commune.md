@@ -2,7 +2,7 @@
 title: "The Commune"
 subtitle: "Film directed by Thomas Vinterberg"
 date: January 14, 2016
-image: ./assets/img/portfolio-covers/The_Commune_tt3082854.webp
+image: /assets/img/portfolio-covers/The_Commune_tt3082854.webp
 alt: The_Commune
 category: Film
 imdb_url: https://www.imdb.com/title/tt3082854
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/The_Commune_tt3082854.webp
+  thumbnail: /assets/img/portfolio-covers/The_Commune_tt3082854.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

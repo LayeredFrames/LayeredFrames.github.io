@@ -2,7 +2,7 @@
 title: "Gek van geluk"
 subtitle: "Film directed by Johan Nijenhuis"
 date: December 7, 2017
-image: ./assets/img/portfolio-covers/Gek_van_geluk_tt6876488.webp
+image: /assets/img/portfolio-covers/Gek_van_geluk_tt6876488.webp
 alt: Gek_van_geluk
 category: Film
 imdb_url: https://www.imdb.com/title/tt6876488
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Gek_van_geluk_tt6876488.webp
+  thumbnail: /assets/img/portfolio-covers/Gek_van_geluk_tt6876488.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

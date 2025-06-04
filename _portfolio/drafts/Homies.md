@@ -2,7 +2,7 @@
 title: "Homies"
 subtitle: "Film directed by Jon Karthaus"
 date: January 22, 2015
-image: ./assets/img/portfolio-covers/Homies_tt3851324.webp
+image: /assets/img/portfolio-covers/Homies_tt3851324.webp
 alt: Homies
 category: Film
 imdb_url: https://www.imdb.com/title/tt3851324
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Homies_tt3851324.webp
+  thumbnail: /assets/img/portfolio-covers/Homies_tt3851324.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

@@ -73,7 +73,7 @@
   </div>
 </nav>
 <!-- End Navigation -->
-  <script>
+  <!-- <script>
   document.addEventListener('DOMContentLoaded', function () {
    const dropdowns = document.querySelectorAll('.dropdown');
  
@@ -89,4 +89,82 @@
      });
    });
  });
- </script>
+ </script> -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    function canHover() {
+      // Check if the device supports hover
+      return window.matchMedia('(hover: hover)').matches;
+    }
+
+    function isCompactMenu() {
+      // Check if the navbar-toggler is visible
+      return navbarToggler.offsetParent !== null; // Returns null if the element is not visible
+    }
+
+    function applyDropdownBehavior() {
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        // Remove existing event listeners
+        toggle.removeEventListener('click', toggleDropdownOnClick);
+        dropdown.removeEventListener('mouseenter', showDropdownOnHover);
+        dropdown.removeEventListener('mouseleave', hideDropdownOnHover);
+
+        if (canHover() && !isCompactMenu()) {
+          // Desktop: Show dropdown on hover
+          // toggle.style.pointerEvents = 'auto'; // Enable link
+          dropdown.addEventListener('mouseenter', showDropdownOnHover);
+          dropdown.addEventListener('mouseleave', hideDropdownOnHover);
+        } else {
+          // Mobile: Toggle dropdown on click
+          // toggle.style.pointerEvents = 'none'; // Disable link
+          toggle.addEventListener('click', toggleDropdownOnClick);
+        }
+      });
+    }
+
+    function toggleDropdownOnClick(event) {
+      event.preventDefault();
+      const menu = this.nextElementSibling;
+      menu.classList.toggle('show');
+    }
+
+    function showDropdownOnHover() {
+      const menu = this.querySelector('.dropdown-menu');
+      menu.classList.add('show');
+    }
+
+    function hideDropdownOnHover() {
+      const menu = this.querySelector('.dropdown-menu');
+      menu.classList.remove('show');
+    }
+
+    // Apply behavior on page load
+    applyDropdownBehavior();
+
+    // Reapply behavior on window resize
+    window.addEventListener('resize', applyDropdownBehavior);
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function (event) {
+      dropdowns.forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+        if (!dropdown.contains(event.target)) {
+          menu.classList.remove('show');
+        }
+      });
+
+      // Collapse navbar if clicking outside of it
+      if (navbarCollapse && !navbarCollapse.contains(event.target)) {
+        navbarCollapse.classList.remove('show');
+        // navbarCollapse.classList.add('collapse');
+      }
+    });
+  });
+</script>

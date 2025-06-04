@@ -2,7 +2,7 @@
 title: "Missie Aarde"
 subtitle: "TV Series directed by "
 date: Sun, Apr 17, 2016
-image: ./assets/img/portfolio-covers/Missie_Aarde_tt4045340.webp
+image: /assets/img/portfolio-covers/Missie_Aarde_tt4045340.webp
 alt: Missie_Aarde
 category: TV Series
 imdb_url: https://www.imdb.com/title/tt4045340
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Missie_Aarde_tt4045340.webp
+  thumbnail: /assets/img/portfolio-covers/Missie_Aarde_tt4045340.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

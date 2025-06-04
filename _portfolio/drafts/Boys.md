@@ -2,7 +2,7 @@
 title: "Boys"
 subtitle: "TV Movie directed by Mischa Kamp"
 date: February 9, 2014
-image: ./assets/img/portfolio-covers/Boys_tt3318220.webp
+image: /assets/img/portfolio-covers/Boys_tt3318220.webp
 alt: Boys
 category: TV Movie
 imdb_url: https://www.imdb.com/title/tt3318220
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Boys_tt3318220.webp
+  thumbnail: /assets/img/portfolio-covers/Boys_tt3318220.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

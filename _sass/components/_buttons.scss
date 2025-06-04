@@ -9,6 +9,13 @@
   padding: 20px 40px;
 }
 
+@media (max-width: 575px) {
+  .btn-xl {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
@@ -43,6 +50,7 @@
     &:hover {
       background-color: rgba(0, 0, 0, 0.7) !important;
       filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) !important;
+      -webkit-filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) !important;
     }
   }
   &:active,
@@ -51,6 +59,7 @@
     opacity: 1;
     color:white;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
   }
 }
 
@@ -72,6 +81,7 @@
     opacity: 1;
     color:white;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
     text-decoration: none
   }
   p {

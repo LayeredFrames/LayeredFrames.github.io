@@ -2,7 +2,7 @@
 title: "Rokjesdag"
 subtitle: "Film directed by Johan Nijenhuis"
 date: March 10, 2016
-image: ./assets/img/portfolio-covers/Rokjesdag_tt4652164.webp
+image: /assets/img/portfolio-covers/Rokjesdag_tt4652164.webp
 alt: Rokjesdag
 category: Film
 imdb_url: https://www.imdb.com/title/tt4652164
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Rokjesdag_tt4652164.webp
+  thumbnail: /assets/img/portfolio-covers/Rokjesdag_tt4652164.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

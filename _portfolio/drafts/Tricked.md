@@ -2,7 +2,7 @@
 title: "Tricked"
 subtitle: "Film directed by Paul Verhoeven"
 date: September 24, 2012
-image: ./assets/img/portfolio-covers/Tricked_tt2171875.webp
+image: /assets/img/portfolio-covers/Tricked_tt2171875.webp
 alt: Tricked
 category: Film
 imdb_url: https://www.imdb.com/title/tt2171875
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Title Design"
-  thumbnail: ./assets/img/portfolio-covers/Tricked_tt2171875.webp
+  thumbnail: /assets/img/portfolio-covers/Tricked_tt2171875.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

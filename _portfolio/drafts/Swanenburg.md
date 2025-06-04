@@ -2,7 +2,7 @@
 title: "Swanenburg"
 subtitle: "TV Series directed by "
 date: Mon, Dec 25, 2023
-image: ./assets/img/portfolio-covers/Swanenburg_tt11935214.webp
+image: /assets/img/portfolio-covers/Swanenburg_tt11935214.webp
 alt: Swanenburg
 category: TV Series
 imdb_url: https://www.imdb.com/title/tt11935214
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: ./assets/img/portfolio-covers/Swanenburg_tt11935214.webp
+  thumbnail: /assets/img/portfolio-covers/Swanenburg_tt11935214.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

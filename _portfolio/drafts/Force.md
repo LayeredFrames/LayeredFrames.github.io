@@ -2,18 +2,18 @@
 title: "Force"
 subtitle: "TV Series directed by "
 date: Sun, Feb 2, 2020
-image: ./assets/img/portfolio-covers/Force_tt3487478.webp
+image: /assets/img/portfolio-covers/Force_tt3487478.webp
 alt: Force
 category: TV Series
 imdb_url: https://www.imdb.com/title/tt3487478
 video_url: 
-homepage: false
+homepage: true
 hidden: false
 breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Force_tt3487478.webp
+  thumbnail: /assets/img/portfolio-covers/Force_tt3487478.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

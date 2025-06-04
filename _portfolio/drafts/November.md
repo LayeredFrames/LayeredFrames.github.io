@@ -2,7 +2,7 @@
 title: "November"
 subtitle: "Film directed by Rainer Sarnet"
 date: January 27, 2017
-image: ./assets/img/portfolio-covers/November_tt6164502.webp
+image: /assets/img/portfolio-covers/November_tt6164502.webp
 alt: November
 category: Film
 imdb_url: https://www.imdb.com/title/tt6164502
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/November_tt6164502.webp
+  thumbnail: /assets/img/portfolio-covers/November_tt6164502.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

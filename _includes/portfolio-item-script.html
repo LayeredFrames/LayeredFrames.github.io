@@ -1,6 +1,6 @@
 <script>
     document.querySelectorAll('.portfolio-item-container').forEach(container => {
-        let animationFrameID;
+        //let animationFrameID;
         const updateShading = (item) => {
             // Get the current opacity of the portfolio-hover element
             const hoverElement = container.querySelector('.portfolio-hover');
@@ -24,7 +24,8 @@
                 requestAnimationFrame(updateShading.bind(null, item, hoverElement));
             }
         };
-        container.addEventListener('mousemove', (e) => {
+        portfolio_item = container.querySelector('.portfolio-item');
+        portfolio_item.addEventListener('mousemove', (e) => {
             //const hoverElement = container.querySelector('.portfolio-hover');
             item = container.querySelector('.portfolio-item');
             container.style.transform = 'scale({{ include.scale | default: 1.03 }})'
@@ -53,7 +54,7 @@
             portfolio_link = container.querySelector('.portfolio-link');
             portfolio_link.style.boxShadow = '2px 4px 8px rgba(0, 0, 0, .1), 0 8px 12px rgba(0, 0, 0, .15)'; // Add shadow on hover
       });
-      container.addEventListener('mouseleave', () => {
+      portfolio_item.addEventListener('mouseleave', () => {
         item = container.querySelector('.portfolio-item');
         portfolio_link = container.querySelector('.portfolio-link');
         // item.style.webkitTransition = 'transform 0.3s ease'; // Smooth transition for reset

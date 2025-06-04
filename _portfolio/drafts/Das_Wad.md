@@ -2,7 +2,7 @@
 title: "Das Wad"
 subtitle: "Film directed by Rob Lücker"
 date: September 30, 2014
-image: ./assets/img/portfolio-covers/Das_Wad_tt4173382.webp
+image: /assets/img/portfolio-covers/Das_Wad_tt4173382.webp
 alt: Das_Wad
 category: Film
 imdb_url: https://www.imdb.com/title/tt4173382
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Das_Wad_tt4173382.webp
+  thumbnail: /assets/img/portfolio-covers/Das_Wad_tt4173382.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

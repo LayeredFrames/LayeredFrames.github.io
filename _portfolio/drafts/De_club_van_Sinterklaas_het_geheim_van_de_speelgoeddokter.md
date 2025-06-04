@@ -2,7 +2,7 @@
 title: "De club van Sinterklaas & het geheim van de speelgoeddokter"
 subtitle: "Film directed by Pieter Walther Boer"
 date: October 3, 2012
-image: ./assets/img/portfolio-covers/De_club_van_Sinterklaas_het_geheim_van_de_speelgoeddokter_tt2401619.webp
+image: /assets/img/portfolio-covers/De_club_van_Sinterklaas_het_geheim_van_de_speelgoeddokter_tt2401619.webp
 alt: De_club_van_Sinterklaas_het_geheim_van_de_speelgoeddokter
 category: Film
 imdb_url: https://www.imdb.com/title/tt2401619
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/De_club_van_Sinterklaas_het_geheim_van_de_speelgoeddokter_tt2401619.webp
+  thumbnail: /assets/img/portfolio-covers/De_club_van_Sinterklaas_het_geheim_van_de_speelgoeddokter_tt2401619.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

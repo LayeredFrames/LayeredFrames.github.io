@@ -2,7 +2,7 @@
 title: "Bella Donna's"
 subtitle: "Film directed by Jon Karthaus"
 date: September 14, 2017
-image: ./assets/img/portfolio-covers/Bella_Donna_s_tt6315790.webp
+image: /assets/img/portfolio-covers/Bella_Donna_s_tt6315790.webp
 alt: Bella_Donna_s
 category: Film
 imdb_url: https://www.imdb.com/title/tt6315790
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/Bella_Donna_s_tt6315790.webp
+  thumbnail: /assets/img/portfolio-covers/Bella_Donna_s_tt6315790.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

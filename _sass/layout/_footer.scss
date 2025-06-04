@@ -44,3 +44,23 @@ ul.social-buttons {
     }
   }
 }
+@media (max-width: 640px) {
+  .footer {
+    span.copyright {
+      font-size: 12px;
+      line-height: 0px;
+    }
+    ul.quicklinks {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+  
+  // ul.social-buttons li a {
+  //   font-size: 30px;
+  //   line-height: 40px;
+  //   width: 40px;
+  //   height: 40px;
+  // }

@@ -33,7 +33,7 @@
 <script>
   fixPageShort();
   function fixPageShort() {
-    if (window.innerHeight > document.body.offsetHeight) {
+    if (window.innerHeight > document.body.offsetHeight && window.innerWidth > 640) {
       document.getElementById("footer").style.position = "fixed";
       document.getElementById("footer").style.bottom = 0;
       document.getElementById("footer").style.right = 0;

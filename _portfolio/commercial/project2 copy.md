@@ -1,7 +1,7 @@
 ---
 title: Koning - TOTO
 subtitle: A film by Steve McQueen
-image: https://images.pathe-thuis.nl/19228_1920x1080.jpg
+image: /assets/img/portfolio/koning-toto.png
 alt: OC
 category: Commercial
 homepage: true
@@ -9,7 +9,7 @@ order: 4
 
 caption:
   role: VFX Supervision and Compositing
-  thumbnail: assets\img\portfolio\koning-toto.png
+  thumbnail: /assets/img/portfolio/koning-toto.png
   title: Koning - TOTO
 ---
 

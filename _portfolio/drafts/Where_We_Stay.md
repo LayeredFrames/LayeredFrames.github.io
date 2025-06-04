@@ -2,7 +2,7 @@
 title: "Where We Stay"
 subtitle: "Film directed by Florence Bouvy"
 date: June 21, 2024
-image: ./assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
+image: /assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
 alt: Where_We_Stay
 category: Film
 imdb_url: https://www.imdb.com/title/tt28131010
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: ./assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
+  thumbnail: /assets/img/portfolio-covers/Where_We_Stay_tt28131010.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

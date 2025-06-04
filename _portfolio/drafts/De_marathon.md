@@ -2,7 +2,7 @@
 title: "De marathon"
 subtitle: "Film directed by Diederick Koopal"
 date: October 18, 2012
-image: ./assets/img/portfolio-covers/De_marathon_tt2401621.webp
+image: /assets/img/portfolio-covers/De_marathon_tt2401621.webp
 alt: De_marathon
 category: Film
 imdb_url: https://www.imdb.com/title/tt2401621
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Digital Compositor"
-  thumbnail: ./assets/img/portfolio-covers/De_marathon_tt2401621.webp
+  thumbnail: /assets/img/portfolio-covers/De_marathon_tt2401621.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 

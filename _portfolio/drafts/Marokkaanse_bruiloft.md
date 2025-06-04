@@ -2,7 +2,7 @@
 title: "Marokkaanse bruiloft"
 subtitle: "Film directed by Johan Nijenhuis"
 date: June 2, 2022
-image: ./assets/img/portfolio-covers/Marokkaanse_bruiloft_tt15261252.webp
+image: /assets/img/portfolio-covers/Marokkaanse_bruiloft_tt15261252.webp
 alt: Marokkaanse_bruiloft
 category: Film
 imdb_url: https://www.imdb.com/title/tt15261252
@@ -13,7 +13,7 @@ breakdown: false
 # order: 0
 caption:
   role: "Visual Effects Supervisor"
-  thumbnail: ./assets/img/portfolio-covers/Marokkaanse_bruiloft_tt15261252.webp
+  thumbnail: /assets/img/portfolio-covers/Marokkaanse_bruiloft_tt15261252.webp
 ---
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 
