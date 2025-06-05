@@ -6,6 +6,7 @@ from pprint import pprint
 import json
 import sys
 import re
+import csv
 
 ia = Cinemagoer()
 
@@ -201,7 +202,11 @@ def download_cover(movie):
             except requests.RequestException as e:
                 print(f"Error downloading cover for {movie['title']}: {e}")
         
-        return convert_image(file_path, output_path)
+        img_path = convert_image(file_path, output_path)
+        if img_path.startswith('.'):
+            img_path = img_path[1:]  # Remove leading dot if present
+        
+        return img_path
 
     else:
         print(f"No cover URL found for {movie['title']}")
@@ -213,7 +218,7 @@ def get_cover_name(movie, extension='jpg'):
     movie_id = movie.get('movie_id', 'unknown_id')
     return f"{title}_{movie_id}.{extension}"
 
-def create_md_file(show, show_id):
+def create_md_file(show, show_id, overwrite=True):
     show['movie_id'] = show_id
     show['alt'] = safe_string(show['title'])
     show['video_url'] = show['videos'][0] if show['videos'] else ""
@@ -233,11 +238,14 @@ def create_md_file(show, show_id):
         template = template_file.read()
 
     page_content = template.format(**show)
-    
+
     show_md_file = f'{drafts_folder}/{safe_string(show["title"])}.md'
-    print(f"Creating markdown file {show_md_file}...")
-    with open(show_md_file, 'w') as page_file:
-        page_file.write(page_content)
+    if (not os.path.exists(show_md_file)) or overwrite:
+        print(f"Creating markdown file {show_md_file}...")
+        with open(show_md_file, 'w') as page_file:
+            page_file.write(page_content)
+    else:
+        print(f"Markdown file {show_md_file} already exists. Skipping creation.")
 
 def add_show(imdb_id, role='VFX Artist', overwrite=False):
     show_db = load_shows()
@@ -274,7 +282,7 @@ def add_show(imdb_id, role='VFX Artist', overwrite=False):
     pprint(show)
 
 
-def add_md_file(show_id):
+def add_md_file(show_id, overwrite=True):
     """Create a markdown file for the show."""
     show_db = load_shows()
     if show_id not in show_db:
@@ -282,10 +290,42 @@ def add_md_file(show_id):
         return
 
     show = show_db[show_id]
-    create_md_file(show, show_id)
+    create_md_file(show, show_id, overwrite=overwrite)
+    
+
+def get_show_list(csv_file):
+    # Read the csv for the project title and imdb_id
+    shows = []
+    with open(csv_file, 'r', encoding='utf-8') as file:
+        reader = csv.DictReader(file, delimiter=';')
+        for row in reader:
+            title = row.get('Project Title')
+            if title:
+                shows.append((
+                    # title.strip(),
+                    row.get('IMDb ID', '').strip(),
+                    row.get("Role").strip()
+                    ))
+
+    return shows
+
+# input_csv = './assets/py/project-list.csv'
+# show_list = get_show_list(input_csv)
+
+# for show in show_list:
+#     imdb_id, role = show
+#     if imdb_id:
+#         # print(f"Adding show {imdb_id} with role {role}")
+#         # add_show(imdb_id, role=role)
+        
+#         # (re)add the markdown file
+#         add_md_file(imdb_id)
+
+#     else:
+#         pass
 
 # add_md_file('tt9573150')
-add_show('tt30221618', role='On set Supervisor')
+# add_show('tt30221618', role='On set Supervisor')
 
 # print(os.path.abspath(show_db_path)
 
@@ -295,3 +335,6 @@ add_show('tt30221618', role='On set Supervisor')
 
 # for movie in movies_data:
 #     add_show(movie['movie_id'], role=movie['role'].title(), overwrite=True)
+
+for show_id in load_shows().keys():
+    add_md_file(show_id, overwrite=False)
