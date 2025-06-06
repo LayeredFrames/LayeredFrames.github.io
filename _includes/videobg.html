@@ -40,7 +40,8 @@ captionElement.innerText = vidSources[nextActiveVideo].caption
 roleElement.innerText = vidSources[nextActiveVideo].role
 videoContainer.appendChild(videoObjects[0]);
 
-videoObjects[1].style.display = 'none';
+// videoObjects[1].style.display = 'none';
+videoObjects[1].style.visibility = 'hidden'; // hide videoB initially
 videoContainer.appendChild(videoObjects[1]);
 videoContainer.appendChild(captionElement);
 videoContainer.appendChild(roleElement);
@@ -48,7 +49,7 @@ function initVideoElement(video)
 {
     video.playsinline = true;
     video.muted = true;
-    video.preload = 'auto';
+    // video.preload = 'auto';
     // video.autoplay= true; 
     //loadedmetadata is wrong because if we use it then we get endless loop
     video.onplaying = function(e)
@@ -75,8 +76,8 @@ function initVideoElement(video)
 
     video.onended = function(e)
     {
-        this.style.display = 'none';
-        nextVideo.style.display = 'block';
+        this.style.visibility = 'hidden';
+        nextVideo.style.visibility = 'visible';
 		captionElement.innerText = captionElement.nextCaption
 		roleElement.innerText = roleElement.nextRole
         nextVideo.play();
