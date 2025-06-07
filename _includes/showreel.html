@@ -16,6 +16,7 @@
                 <h3 class="section-subheading text-muted">{{ showreel_text | markdownify | default: "Showreel" }}</h3>
             </div>
         </div>
-        {% include vimeoPlayer.html %}
+        {%- comment -%} {% include vimeoPlayer.html %} {%- endcomment -%}
+        <img class="img-fluid" src="https://placehold.co/1280x720?text=Coming+soon!" }}" alt="Showreel placeholder">
     </div>
 </section>

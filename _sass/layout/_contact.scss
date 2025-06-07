@@ -46,3 +46,21 @@ section#contact {
     @include heading-font;
   }
 }
+
+@media (max-width: 640px) {
+  section#contact {
+    .form-group {
+      margin-bottom: 15px;
+      input,
+      textarea {
+        padding: 10px;
+      }
+      input.form-control {
+        height: auto;
+      }
+      textarea.form-control {
+        height: 124px;
+      }
+    }
+}
+}

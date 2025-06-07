@@ -59,7 +59,7 @@ h6 {
 // }
 
 .page-section {
-  padding: 50px 0;
+  padding: 10px 0;
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -72,12 +72,18 @@ h6 {
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     text-transform: none;
     @include serif-font;
   }
 }
 @media (min-width: 768px) {
+  .page-section {
+    padding: 50px 0;
+    h2.section-heading {
+      font-size: 50px;
+    }
+  }
   section {
     padding: 150px 0;
   }
