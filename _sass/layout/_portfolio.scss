@@ -97,21 +97,27 @@
             // }
           }
         }
-        @media (max-width: 640px) {
-          .portfolio-link {
-            max-width: calc(var(--maximum-width)*0.5); /* Set a fixed width for larger screens */
-            .portfolio-hover {
-              .portfolio-hover-content {
-                font-size: 10px; /* Adjust font size for smaller screens */
-              }
-            .portfolio-caption{
-              p {
-                font-size: 12px; /* Adjust font size for smaller screens */
-              }
-            }
-            }
+    .portfolio-btn-wrapper{
+      width: var(--maximum-width);
+    }
+    @media (max-width: 640px) {
+      .portfolio-btn-wrapper{
+        max-width: calc(var(--maximum-width)*0.5);
+      }
+      .portfolio-link {
+        max-width: calc(var(--maximum-width)*0.5); /* Set a fixed width for larger screens */
+        .portfolio-hover {
+          .portfolio-hover-content {
+            font-size: 10px; /* Adjust font size for smaller screens */
+          }
+        .portfolio-caption{
+          p {
+            font-size: 12px; /* Adjust font size for smaller screens */
           }
         }
+        }
+      }
+    }
         // .portfolio-shading{
           //   // background-color: rgba(0, 0, 0, 0.4);
           //   position: relative;
