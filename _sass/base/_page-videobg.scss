@@ -9,6 +9,12 @@ video.background {
     object-fit:cover;
   }
 
+.videobg-caption-container {
+  position: relative;
+  height: 100dvh;
+  // height: -webkit-fill-available;
+}
+
 .videobg-caption{
   color:$white;
   // backgroundr: transparent;
@@ -49,7 +55,7 @@ video.background {
     font-size: 16px;
     padding-bottom:20px;
     margin-left: 20px;
-    margin-bottom: 20pxh;
+    margin-bottom: 20px;
   }
   .videobg-role {
     // left:10px;

@@ -8,6 +8,7 @@
         document.createElement('video'),
         document.createElement('video')
     ],
+    captionDiv = document.createElement('div'),
 	captionElement = document.createElement('p'),
 	roleElement = document.createElement('p'),
     vidSources =
@@ -21,6 +22,7 @@
 	initRun=true;
 	// nextActiveVideo = 0;
 
+captionDiv.setAttribute("class", "videobg-caption-container");
 captionElement.setAttribute("class", "videobg-caption");
 roleElement.setAttribute("class", "videobg-role videobg-caption");
 
@@ -43,12 +45,15 @@ videoContainer.appendChild(videoObjects[0]);
 // videoObjects[1].style.display = 'none';
 videoObjects[1].style.visibility = 'hidden'; // hide videoB initially
 videoContainer.appendChild(videoObjects[1]);
-videoContainer.appendChild(captionElement);
-videoContainer.appendChild(roleElement);
+videoContainer.appendChild(captionDiv);
+captionDiv.appendChild(captionElement);
+captionDiv.appendChild(roleElement);
 function initVideoElement(video)
 {
+    video.playsInline = true;
     video.playsinline = true;
     video.muted = true;
+    video.defaultMuted = true;
     // video.preload = 'auto';
     // video.autoplay= true; 
     //loadedmetadata is wrong because if we use it then we get endless loop
