@@ -56,8 +56,9 @@
   {% endif %}
   {% endfor %}
   {% if include.more %}
-  <div class="col-md-auto portfolio-item">
-      <a class="btn btn-classy" href="{{ include.more }}">More...</a>
+  <div class="col-md-auto portfolio-item" style="width: {{ include.max_width }}px;">
+    <a class="btn btn-classy" href="{{ include.more }}">More...</a>
+  </div>
   </div>
   {% endif %}
   </div>
