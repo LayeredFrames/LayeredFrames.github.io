@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         playPauseIcon.classList.remove('fa-pause');
         playPauseIcon.classList.add('fa-play');
     };
-    syncVideos();}
+    syncVideos();
+  }
 
     // Toggle play/pause functionality
     togglePlayButton.addEventListener('click', () => {

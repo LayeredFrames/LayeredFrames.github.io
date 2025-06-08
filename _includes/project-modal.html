@@ -1,0 +1,62 @@
+<!-- Portfolio Modals -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+{% assign closebutton = site.data.sitetext[site.locale].portfolio.closebutton %}
+{% else %}
+{% assign closebutton = site.data.sitetext.portfolio.closebutton %}
+{% endif %}
+
+{% assign project=include.project %}
+
+<div
+  class="portfolio-modal modal fade"
+  id="{%- include project-url-filter.html input=project.title -%}" 
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+  data-backdrop="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- <div class="col-lg-8 mx-auto"> -->
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="project-title">{{ project.title }}{% include edit-button.html path=project.path %}</h2>
+              <p class="item-intro text-muted">{{ project.subtitle }}</p>
+              {% if project.image %}
+              <!-- <div> -->
+              <img
+                class="img-fluid d-block mx-auto"
+                src="{{ project.image }}"
+                alt="{{ project.alt }}"
+              />
+              <div class="project-image-caption">
+                {% if project.imdb_url %}
+                <a class="imdb-link fab fa-imdb" target="_blank" rel="noopener noreferrer" href="{{ project.imdb_url }}"><p>IMDb page</p></a>
+                {% endif %}
+                {% if project.video_url %}
+                <a class="imdb-link fab fa-youtube" target="_blank" rel="noopener noreferrer" href="{{ project.video_url }}"><p>Watch trailer</p></a>
+                {% endif %}
+              </div>
+              <!-- </div> -->
+              {% endif %}
+              <div class="project-content"><p>{{ project.content }}</p></div>
+              <button
+                class="btn btn-classy"
+                data-dismiss="modal"
+                type="button"
+              >
+                {{ closebutton | default: "Close Project" }}
+              </button>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Portfolio Modal -->
