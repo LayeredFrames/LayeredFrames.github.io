@@ -17,6 +17,8 @@
             </div>
         </div>
         {%- comment -%} {% include vimeoPlayer.html %} {%- endcomment -%}
-        <img class="img-fluid" src="https://placehold.co/1280x720?text=Coming+soon!" }}" alt="Showreel placeholder">
+        {%- comment -%} <img class="img-fluid" src="https://placehold.co/1280x720?text=Coming+soon!" }}" alt="Showreel placeholder"> {%- endcomment -%}
+        {% include vimeoPlayer.html %}
+        {%- comment -%} {% include video-compare.html before="https://placehold.co/1280x720?text=Before+video" after="https://placehold.co/1280x720?text=After+video" position=50 autoplay=true loop=true %} {%- endcomment -%}
     </div>
 </section>

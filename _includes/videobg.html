@@ -102,4 +102,13 @@ function initVideoElement(video)
 
 // };
 videoObjects[0].play();
+
+// Add a scroll event listener
+window.addEventListener('scroll', () => {
+  // Calculate the scroll position
+  const scrollTop = window.scrollY;
+  // Update the CSS variable --scroll
+  document.documentElement.style.setProperty('--scroll', `${scrollTop}px`);
+});
+
 </script>

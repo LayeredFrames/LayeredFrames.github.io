@@ -24,23 +24,39 @@ headervids:
   #   role: Audience member
   #   url: /#portfolio
   
-  - source: "/assets/video/madebylions.webm"
+  - source: "/assets/video/CocaColaStarWars.mp4"
+    caption: Coca Cola Star Wars
+    role: Digital Compositing
+    url: /#portfolio
+  - source: "/assets/video/madebylions.mp4"
     caption: Made by Lions - Medianauts
     role: VFX Supervisor
     url: /#portfolio
-  - source: "/assets/video/05_The-Little-Vampire_A-Film_.webm"
+  - source: "/assets/video/05_The-Little-Vampire_A-Film_.mp4"
     caption: A-Film - The Little Vampire
     role: Compositing / Look development
     url: /#portfolio
-  - source: "/assets/video/Red-Light-pt2_Kaap-Holland-Film.webm"
-    caption: Kaap Holland Film - Red Light
-    role: Digital Compositor
+  - source: "/assets/video/GODSPEED.mp4"
+    caption: GodSpeed - Arne Toonen
+    role: VFX Supervisor / Compositing
     url: /#portfolio
-  - source: "/assets/video/Sweet_Dreams-1.webm"
-    caption: Sweet Dreams
-    role: VFX Supervisor
+  - source: "/assets/video/Veronica_app.mp4"
+    caption: Veronica App
+    role: Compositing / CG lookdev & rendering
     url: /#portfolio
-  - source: "/assets/video/Homepage_de-terugreis.webm"
-    caption: De Terugreis
-    role: Audience member
+  - source: "/assets/video/McDonalds_Loyalty.mp4"
+    caption: McDonald's - StudioStudio
+    role: VFX Supervisor / Compositing
+    url: /#portfolio
+  - source: "/assets/video/KFC_UBTB.mp4"
+    caption: KFC
+    role: Set Supervisor / Compositor
+    url: /#portfolio
+  - source: "/assets/video/VOB_098.mp4"
+    caption: Verliefd op Bali
+    role: VFX Supervisor / Compositor
+    url: /#portfolio
+  - source: "/assets/video/Czar_Hyundai.mp4"
+    caption: Czar - Hyundai
+    role: VFX (set) Supervisor / Compositor
     url: /#portfolio

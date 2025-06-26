@@ -7,6 +7,7 @@ video.background {
     height: 100%;
     z-index: -100;
     object-fit:cover;
+    transform:translateY(calc(var(--scroll) * 0.5));
   }
 
 .videobg-caption-container {

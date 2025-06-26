@@ -15,7 +15,7 @@
 {% endif %}
 
 <style>
-.videoheader {
+.bgVideoContainer {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -47,7 +47,7 @@ var vidSources =
 var initialVid = Math.floor((Math.random() * vidSources.length))
 
 document.addEventListener("DOMContentLoaded", function() {
-  console.log(vidSources[initialVid].src);
+  //console.log(vidSources[initialVid].src);
   var videoA = document.getElementById("videoA");
   videoA.nextInx = 1; //set index of other video element
 
@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
   videoB.nextInx = 0; //set index of other video element
   videoB.style.visibility = 'hidden'; // hide videoB initially
 
-  var videoAText = document.querySelector('.videoA');
-  var videoBText = document.querySelector('.videoB');
+  var captionText = document.querySelector('.header-caption-text');
+  var roleText = document.querySelector('.header-role-text');
 
   var videoObjects = [videoA, videoB];
   //videoB.style.display = 'none'; // hide videoB initially
@@ -68,20 +68,24 @@ document.addEventListener("DOMContentLoaded", function() {
     video.src = vidSources[initialVid].src;
     video.vidinx = initialVid; //set index
     video.load();
-    console.log("Video source", video.id,  "set to: " + video.src);
+    //console.log("Video source", video.id,  "set to: " + video.src);
     //select next index. If is equal vidSources.length then it is 0
     initialVid = ++initialVid % vidSources.length;
 
-    video.onplaying = function(e) {
-      console.log(this.src + "(" + this.vidinx + ") is playing");
+    video.onplay = function(e) {
+      //console.log(this.src + "(" + this.vidinx + ") is playing");
+
+      captionText.textContent = vidSources[this.vidinx].caption; // set caption text
+      roleText.textContent = vidSources[this.vidinx].role; // set role text
+
       nextVideoElement = videoObjects[this.nextInx];
       nextSource = (this.vidinx + 1) % vidSources.length; // get next video index
       if (nextSource != nextVideoElement.vidinx) {
         nextVideoElement.src = vidSources[nextSource].src;
         nextVideoElement.vidinx = nextSource; // set index of next video
         nextVideoElement.load();
-        console.log(nextVideoElement.id + "source is set to" + nextVideoElement.src + " (" + this.vidinx + ")");
-      }
+        //console.log(nextVideoElement.id + "source is set to" + nextVideoElement.src + " (" + this.vidinx + ")");
+      };
     };
 
     video.onended = function(e) {
@@ -91,7 +95,15 @@ document.addEventListener("DOMContentLoaded", function() {
       nextVideoElement.style.visibility = 'visible'; // show the next video
       //nextVideoElement.load();
       nextVideoElement.play();
-      console.log(this.src + "(" + this.vidinx + ") has ended, switching to " + nextVideoElement.src + " (" + nextVideoElement.vidinx + ")");
+      //console.log(this.src + "(" + this.vidinx + ") has ended, switching to " + nextVideoElement.src + " (" + nextVideoElement.vidinx + ")");
+    };
+
+    video.onprogress = function(e) {
+      if (this.buffered.length > 0) {
+        var bufferedEnd = this.buffered.end(this.buffered.length - 1);
+        var percentBuffered = (bufferedEnd / this.duration) * 100;
+        //console.log(this.src + " (" + this.vidinx + ") buffered: " + percentBuffered.toFixed(2) + "%");
+      }
     };
   }
 
@@ -100,13 +112,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
-<header class=videoheader>
 
-<video id="videoA" class="background" muted playsinline></video>
-<video id="videoB" class="background" muted playsinline></video>
+<div class="bgVideoContainer">
 
-<div class="header-caption">
-<p class=videoA>videoA:</p>
-<p class=videoA>videoB:</p>
+  <video id="videoA" class="background" muted playsinline preload></video>
+  <video id="videoB" class="background" muted playsinline preload></video>
+
+  <div class="header-caption">
+    <p class="header-caption-text"></p>
+    <p class="header-role-text"></p>
+  </div>
 </div>
-</header>
