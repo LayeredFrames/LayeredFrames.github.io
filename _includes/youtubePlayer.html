@@ -1,8 +1,9 @@
 <div class="embed-container">
     <iframe
+        class="d-block mx-auto"
         src="https://www.youtube.com/embed/{{ include.id }}"
-        width="940"
-        height="520"
+        width="{{ include.width | default: 960 }}"
+        height="{{ include.height | default: 540 }}"
         frameborder="0"
         allowfullscreen="true">
     </iframe>

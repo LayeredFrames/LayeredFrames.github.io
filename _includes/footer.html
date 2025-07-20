@@ -31,7 +31,6 @@
 </footer>
 {% if page.layout == "page" or page.layout contains "page" %}
 <script>
-  fixPageShort();
   function fixPageShort() {
     if (window.innerHeight > document.body.offsetHeight && window.innerWidth > 640) {
       document.getElementById("footer").style.position = "fixed";
@@ -42,6 +41,7 @@
       document.getElementById("footer").style.padding = "10px 0";
     }
   }
+  fixPageShort();
 </script>
 {% endif %}
 <!-- End Footer -->

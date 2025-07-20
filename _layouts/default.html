@@ -23,6 +23,30 @@
 	  <!-- Custom scripts for this template -->
 	  <script src="/assets/js/agency.min.js"></script>
 
+	  <script>
+		// Ensure this runs after the DOM is fully loaded
+		document.addEventListener("DOMContentLoaded", function () {
+			// Listen for the modal close event
+			$(".modal").on("hide.bs.modal", function (e) {
+			if (document.activeElement) {
+				document.activeElement.blur();
+			};
+			// Reset the src attribute of any iframe inside the modal
+			$(this).find("iframe").each(function () {
+				$(this).attr("src", $(this).attr("src"));
+			});
+			// set aria-hidden attribute to true
+			$(this).attr("aria-hidden", "true");
+			});
+
+			// Add event listner for the modal open event
+			$(".portfolio-modal").on("show.bs.modal", function (e) {
+				// set aria-hidden attribute to false
+				$(this).attr("aria-hidden", "false");
+			});
+		});
+	</script>
+
 	  <!-- Custom scripts -->
 	  {%- comment -%} <script src="/assets/js/video_comparison.js"></script> {%- endcomment -%}
 	  {% if jekyll.environment == "development" %}

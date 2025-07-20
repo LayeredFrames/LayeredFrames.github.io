@@ -7,7 +7,7 @@ alt: Occupied_City
 category: Film
 imdb_url: https://www.imdb.com/title/tt9573150
 video_url: http://www.imdb.com/title/tt9573150/videoplayer/vi4157523737
-homepage: true
+homepage: false
 hidden: false
 breakdown: false
 # order: 0

@@ -34,6 +34,7 @@
                 src="{{ project.image }}"
                 alt="{{ project.alt }}"
               />
+              {% endif %}
               <div class="project-image-caption">
                 {% if project.imdb_url %}
                 <a class="imdb-link fab fa-imdb" target="_blank" rel="noopener noreferrer" href="{{ project.imdb_url }}"><p>IMDb page</p></a>
@@ -43,7 +44,6 @@
                 {% endif %}
               </div>
               <!-- </div> -->
-              {% endif %}
               <div class="project-content"><p>{{ project.content }}</p></div>
               <button
                 class="btn btn-classy"
