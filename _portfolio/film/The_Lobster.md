@@ -2,7 +2,8 @@
 title: "The Lobster"
 subtitle: "Film directed by Yorgos Lanthimos"
 date: May 15, 2015
-image: /assets/img/portfolio-covers/The_Lobster_tt3464902.webp
+# image: /assets/img/portfolio-covers/The_Lobster_tt3464902.webp
+image: "https://www.rogerebert.com/wp-content/uploads/2024/07/The-Lobster.jpg"
 alt: The_Lobster
 category: Film
 imdb_url: https://www.imdb.com/title/tt3464902
@@ -18,5 +19,7 @@ caption:
 Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 
 [{{ page.date | date: "%d %B %Y" | default: "IMDb" }}]({{ page.imdb_url }}/releaseinfo/){:target="_blank"}
+
+{% include youtubePlayer.html width="640" height="360" id="LTNZmOJxuAc?si=dgERXUinXlb21b17" %}
 
 A love story set in a dystopian near future where single people are arrested and transferred to a creepy hotel. There they are obliged to find a matching mate in 45 days. If they fail, they are transformed into an animal and released into the woods.

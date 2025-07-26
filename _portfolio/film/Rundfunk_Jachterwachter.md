@@ -19,4 +19,6 @@ Role: <span style="color:white">{{ page.caption.role | default: "N/A" }}</span>
 
 [{{ page.date | date: "%d %B %Y" | default: "IMDb" }}]({{ page.imdb_url }}/releaseinfo/){:target="_blank"}
 
+{% include youtubePlayer.html width="640" height="360" id="dR8jUzLI5_E?si=A3j6M7QOMEZLEQ0x" %}
+
 A hard-working guy runs the HIVO-campsite without any assistance. The sudden arrival of faded celebrity Ronnie Bosboom Jr. seems like a blessing at first, but when he reveals to be hiding from criminals, things quickly go awry. The duo must learn to work together to save the camping and their lives.
