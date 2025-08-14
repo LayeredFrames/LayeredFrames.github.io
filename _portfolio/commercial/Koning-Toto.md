@@ -6,6 +6,7 @@ alt: OC
 category: Commercial
 homepage: true
 order: 4
+date: 30 August, 2021
 
 caption:
   role: VFX Supervision and Compositing
@@ -14,5 +15,5 @@ caption:
 ---
 The main challange of this TVC was doing crowd duplication of the extra's and wire removals of the puppets.
 
-{% include youtubePlayer.html width="640" height="360" id="vrRgjaSF5r8?si=OuqBd6B9LmUbgB3J" %}
 Role: {{ page.caption.role }}
+{% include youtubePlayer.html width="640" height="360" id="vrRgjaSF5r8?si=OuqBd6B9LmUbgB3J" %}

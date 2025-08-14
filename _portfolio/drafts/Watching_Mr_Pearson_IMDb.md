@@ -10,6 +10,7 @@ video_url:
 homepage: false
 hidden: true
 breakdown: false
+date: 1 January, 2026
 # order: 0
 caption:
   role: "Visual Effects Supervisor"

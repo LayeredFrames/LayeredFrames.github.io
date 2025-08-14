@@ -7,6 +7,7 @@ category: Commercial
 homepage: false
 order: 0
 hidden: true
+date: 1 January, 2020
 
 caption:
   title: Title

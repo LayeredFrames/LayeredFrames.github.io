@@ -6,6 +6,7 @@ alt: OC
 category: Commercial
 homepage: true
 order: 2
+date: 1 November, 2024
 
 caption:
   title: Foodora - It Sticks
@@ -13,6 +14,7 @@ caption:
   thumbnail: /assets/img/portfolio/foodora-stickit.png
 ---
 For this campaign we had to create 3 commercials, which each had 8 different versions of the promo-code in the guitar, and the screen inserts on the phone for each country it was aired.
+Role: {{ page.caption.role }}
 
 <video class="d-block mx-auto" controls width="640" poster="https://d2clgeqocjw7k2.cloudfront.net/672cf658123732001a56e4a2/frame_0000.png" height="360" preload="none" src="https://d2clgeqocjw7k2.cloudfront.net/672cf658123732001a56e4a2/high.mp4">
 
@@ -30,4 +32,3 @@ For this campaign we had to create 3 commercials, which each had 8 different ver
             <img src="https://d2clgeqocjw7k2.cloudfront.net/672cf658123732001a56e4a2/frame_0000.png" width="100%" height="100%">
         </object>
 </video>
-Role: {{ page.caption.role }}

@@ -6,6 +6,7 @@ alt: OC
 category: Commercial
 homepage: false
 order: 2
+date: 24 July, 2024
 
 caption:
   title: Foodora - Oh Yeah
@@ -14,5 +15,6 @@ caption:
 ---
 For this campaign we had to create 8 different versions of the the screen inserts on the phone for each country it was aired.
 
-{% include youtubePlayer.html width="640" height="360" id="Wrfhu9egLkU?si=lgLrg9BvMmzJ9rhu" %}
 Role: {{ page.caption.role }}
+
+{% include youtubePlayer.html width="640" height="360" id="Wrfhu9egLkU?si=lgLrg9BvMmzJ9rhu" %}

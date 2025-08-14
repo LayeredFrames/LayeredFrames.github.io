@@ -10,6 +10,7 @@ video_url:
 homepage: false
 hidden: false
 breakdown: false
+date: July 6, 2022
 # order: 0
 caption:
   role: "Digital Compositor"
