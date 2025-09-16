@@ -13,14 +13,14 @@
 
 # theme: jekyll-agency
 
-url    : "https://layeredframes.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "https://layeredframes.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 host: 0.0.0.0
 
-title      : Layered Frames
+title      : Timo Aaldriks VFX portfolio website
 email      : ""
-description: "Timo Aaldriks VFX portfolio website"
-social_image: "https://layeredframes.com/assets/img/logo/logo_small.png"
+description: "Timo Aaldriks VFX Supervisor & Compositor - Portfolio website"
+social_image: "https://layeredframes.com/assets/img/logo/logo_web_preview.png"
 author     : Timo Aaldriks
 logo:     #optional, defaults to site title
   path: \assets\img\logo\logo_with_text.svg
@@ -53,3 +53,5 @@ formspree_form_path: "f/mqaqdywo"
 #   - url_filter
 
 permalink: pretty
+
+# bundle exec jekyll serve -H 192.168.0.208 --trace
