@@ -58,4 +58,26 @@
   <style>{{ page.layout }}</style>
   {% endif %}
   
+  {% comment %} social preview meta (OG / Twitter) {% endcomment %}
+  {% assign og_title = page.og_title | default: page.title | default: site.title %}
+  {% assign og_description = page.og_description | default: page.excerpt | default: page.description | default: site.description %}
+  {% assign og_image_raw = page.og_image | default: page.image | default: site.social_image %}
+  {% if og_image_raw %}
+    {% if og_image_raw contains 'http' %}
+      {% assign og_image = og_image_raw %}
+    {% else %}
+      {% assign og_image = site.url | append: og_image_raw %}
+    {% endif %}
+  {% endif %}
+
+  <meta property="og:title" content="{{ og_title }}" />
+  <meta property="og:description" content="{{ og_description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  {% if og_image %}<meta property="og:image" content="{{ og_image }}" />{% endif %}
+
+  <meta name="twitter:card" content="{% if og_image %}summary_large_image{% else %}summary{% endif %}" />
+  <meta name="twitter:title" content="{{ og_title }}" />
+  <meta name="twitter:description" content="{{ og_description }}" />
+  {% if og_image %}<meta name="twitter:image" content="{{ og_image }}" />{% endif %}
 </head>

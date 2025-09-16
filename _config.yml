@@ -19,7 +19,8 @@ host: 0.0.0.0
 
 title      : Layered Frames
 email      : ""
-description: "Layered Frames VFX portfolio website"
+description: "Timo Aaldriks VFX portfolio website"
+social_image: "https://layeredframes.com/assets/img/logo/logo_small.png"
 author     : Timo Aaldriks
 logo:     #optional, defaults to site title
   path: \assets\img\logo\logo_with_text.svg
