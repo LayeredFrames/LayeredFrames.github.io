@@ -35,7 +35,7 @@
   
     <div class="portfolio-item-container" has_breakdown={% if project.breakdown %}true{% else %}false{% endif %}>
     <div class="col-md-auto portfolio-item" style="--maximum-width: {{ include.max_width | default: 250 }}px">
-      <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}">
+      <a class="portfolio-link drop-shadow" data-toggle="modal" href="#{%- include project-url-filter.html input=project.title -%}" data-umami-event="project-click" data-umami-event-title="{{ project.title | escape }}">
         {% if project.caption.title %}
         <div class="portfolio-title">{{ project.caption.title }}</div>
         {% endif %}
